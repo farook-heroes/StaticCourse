@@ -1,0 +1,104 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <!-- [ Main Content ] start -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="i-block card-body" data-clipboard-text="feather icon-award" data-filter="icon-award" data-toggle="tooltip" title data-original-title="icon-award">
+            <i class="feather icon-award">
+              <h5>Run Institution</h5>
+            </i>
+            </div>
+         
+        </div>
+        <div class="card-block">
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="myTabContent">
+    <div class="card-body" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Teacher</th>
+            <th>Subject</th>
+            <th>Qualification</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <h6 class="m-0"><img class="rounded-circle m-r-10" style="width:40px;"
+                  src="{% static 'assets/images/user/avatar-1.jpg' %}" alt="activity-user">Ida Jorgensen</h6>
+            </td>
+            <td>
+              <h6 class="m-0">Math</h6>
+            </td>
+            <td>
+              <h6 class="m-0">Ph.D</h6>
+            </td>
+         
+          </tr>
+
+          <tr>
+            <td>
+              <h6 class="m-0"><img class="rounded-circle  m-r-10" style="width:40px;"
+                  src="{% static 'assets/images/user/avatar-2.jpg' %}" alt="activity-user">Albert Andersen</h6>
+            </td>
+            <td>
+              <h6 class="m-0">Science</h6>
+            </td>
+            <td>
+              <h6 class="m-0">B.Sc (Science)</h6>
+            </td>
+            
+          </tr>
+
+          <tr>
+            <td>
+              <h6 class="m-0"><img class="rounded-circle  m-r-10" style="width:40px;"
+                  src="{% static 'assets/images/user/avatar-3.jpg' %}" alt="activity-user">Silje Larsen</h6>
+            </td>
+            <td>
+              <h6 class="m-0">Social</h6>
+            </td>
+            <td>
+              <h6 class="m-0">B.Com</h6>
+            </td>
+       
+          </tr>
+          <tr>
+            <td>
+              <h6 class="m-0"><img class="rounded-circle  m-r-10" style="width:40px;"
+                  src="{% static 'assets/images/user/avatar-1.jpg' %}" alt="activity-user">Ida Jorgensen</h6>
+            </td>
+            <td>
+              <h6 class="m-0">Physics</h6>
+            </td>
+            <td>
+              <h6 class="m-0">B.Sc (Physics)</h6>
+            </td>
+         
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- [ Main Content ] end -->
+
+{% endblock content %}

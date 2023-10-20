@@ -1,0 +1,85 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="row">
+      <!-- [ basic-table ] start -->
+      
+      <!-- [ basic-table ] end -->
+
+      <!-- [ Hover-table ] start -->
+      <div class="col-xl-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Student Appointments</h5>
+            
+          </div>
+          <div class="card-block table-border-style">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                    <th>Subject </th>
+                    <th>Date</th>
+                    <th>Status</th>
+                <th class="text-right"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Math</td>
+                    <td>17-02-2023</td>
+                    <td>
+                      <h6 class="m-0 text-c-green">Done</h6>
+                    </td>
+                    <td class="text-right"><i class="fas fa-circle text-c-green f-10"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Science</td>
+                    <td>18-01-2023</td>
+                    <td>
+                      <h6 class="m-0 text-c-red">Missed</h6>
+                    </td>
+                    <td class="text-right"><i class="fas fa-circle text-c-red f-10"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>Math</td>
+                    <td>10-05-2023</td>
+                    <td>
+                      <h6 class="m-0 text-c-purple">Delayed</h6>
+                    </td>
+                    <td class="text-right"><i class="fas fa-circle text-c-purple f-10"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [ Hover-table ] end -->
+
+     
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
