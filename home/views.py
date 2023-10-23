@@ -29,3 +29,11 @@ def sample_page(request):
     'segment': 'sample_page',
   }
   return render(request, 'pages/sample-page.html', context)
+
+@login_required(login_url='/accounts/login/')
+def tab_page(request):
+  
+  context = {
+    'segment': 'tab_page',
+  }
+  return render(request, 'pages/tabs.html', context)
