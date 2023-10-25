@@ -41,7 +41,7 @@ def tab_page(request):
         username=request.POST["username"]
         password=request.POST["password"]
         role=request.POST['role']
-        print(request)
+        print(request,role)
         if role == 'student':
             student_group = Group.objects.get(name='Student')
             student_user = User.objects.create_user(username=username, password=password)
@@ -50,7 +50,7 @@ def tab_page(request):
             email = request.POST['email']
             first_name = request.POST['first_name']
             last_name = request.POST['last_name']
-            phone_number = request.POST['phone_number']
+            phone_number = request.POST['phone']
             age = request.POST['age']
             address = request.POST['address']
             about_info = request.POST['about_info']
@@ -80,7 +80,7 @@ def tab_page(request):
             email = request.POST['email']
             first_name = request.POST['first_name']
             last_name = request.POST['last_name']
-            phone_number = request.POST['phone_number']
+            phone_number = request.POST['phone']
             subject = request.POST['subject']
             age = request.POST['age']
             address = request.POST['address']
