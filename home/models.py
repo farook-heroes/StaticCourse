@@ -11,15 +11,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-class Booking(models.Model):
-    name = models.CharField(max_length=255)
-    phone = models.CharField(max_length=15)  # Adjust the max_length as needed
-    description = models.TextField(blank=True, null=True)
-    date = models.DateField()
-   
 
-    def __str__(self):
-        return f"Booking for {self.name} on {self.date}"
 
 class Student(models.Model):
     username = models.CharField(max_length=100, unique=True)
@@ -34,7 +26,14 @@ class Student(models.Model):
 
     def __str__(self):
         return self.username
-    
+class Booking(models.Model):
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=15)  # Adjust the max_length as needed
+    description = models.TextField(blank=True, null=True)
+    date = models.DateField()
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+
+  
 class Teacher(models.Model):
     username = models.CharField(max_length=100, unique=True)
     password = models.CharField(max_length=100)
@@ -49,5 +48,3 @@ class Teacher(models.Model):
 
     def __str__(self):
         return self.username
-
-

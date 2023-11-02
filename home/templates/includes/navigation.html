@@ -7,7 +7,7 @@
       <div class="b-bg">
         <i class="feather icon-trending-up"></i>
       </div>
-      <span class="b-title">Datta Able</span>
+      <span class="b-title">Run Institution</span>
     </a>
   </div>
   <a class="mobile-menu" id="mobile-header" href="javascript:">
@@ -88,7 +88,11 @@
           <div class="dropdown-menu dropdown-menu-right profile-notification">
             <div class="pro-head">
               <img src="{% static 'assets/images/user/avatar-1.jpg' %}" class="img-radius" alt="User-Profile-Image">
-              <span>John Doe</span>
+              <span>{{request.user.username}} <ul>
+                {% for group in user.groups.all %}
+                    <li class="text-c-green">{{ group.name }}</li>
+                {% endfor %}
+            </ul></span>
               {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                 <a href="{% url 'admin:logout' %}" class="dud-logout" title="Logout">

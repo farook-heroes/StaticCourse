@@ -8,17 +8,68 @@ from django.contrib.auth.decorators import login_required
 
 
 from django.contrib.auth.models import User, Group
-
+from django.http import JsonResponse,HttpResponse
 
 from .models import *
+import json
+from pathlib import Path
+import os
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+def test(request):
+      return render(request,"pages/home.html")
+
+
 
 def index(request):
-
+  if(request.user.is_authenticated):
+        student = Student.objects.get(username=request.user.username)
+        bookings = Booking.objects.filter(student=student)
+        print(f"Student: {student.username}")
+        for booking in bookings:
+            print(booking)
+        p=[]
+        for i in bookings:
+              k=dict()
+              formatted_date =i.date.strftime('%Y-%m-%d')
+              k={"title":i.name,"date":formatted_date}
+              
+              p.append(k)
+        s={"events":p}
+       
+        s=json.dumps(s, indent=4)
+        print(s)
+        json_file_path = os.path.join(BASE_DIR, 'static')
+        with open(json_file_path+'/booking.json', 'w') as json_file:
+            json_file.write(s)
+      
   context = {
     'segment'  : 'index',
     #'products' : Product.objects.all()
-  }
+   }
   return render(request, "pages/index.html", context)
+
+
+
+def details(request,username):
+        print(username)
+        student = Student.objects.get(username=username)
+        bookings = Booking.objects.filter(student=student)
+        print(f"Student: {student.username}")
+        for booking in bookings:
+            print(booking)
+        p=[]
+        for i in bookings:
+              k=dict()
+              formatted_date =i.date.strftime('%Y-%m-%d')
+              k={"title":i.name,"date":formatted_date}
+              
+              p.append(k)
+        s={"events":p}
+        return JsonResponse(s)
+
+
 
 def tables(request):
   context = {
@@ -28,9 +79,27 @@ def tables(request):
 
 @login_required(login_url='/accounts/login/')
 def sample_page(request):
-  
+  student = Student.objects.get(username=request.user.username)
+  bookings = Booking.objects.filter(student=student)
+  print(f"Student: {student.username}")
+  for booking in bookings:
+      print(booking)
+  p=[]
+  for i in bookings:
+        k=dict()
+        formatted_date =i.date.strftime('%Y-%m-%d')
+        k={"title":i.name,"date":formatted_date}
+        
+        p.append(k)
+  s={"events":p}
+  s=json.dumps(s, indent=4)
+  print(s)
+  json_file_path = os.path.join(BASE_DIR, 'static')
+  with open(json_file_path+'/booking.json', 'w') as json_file:
+      json_file.write(s)
   context = {
     'segment': 'sample_page',
+    "username":request.user.username
   }
   return render(request, 'pages/sample-page.html', context)
 
