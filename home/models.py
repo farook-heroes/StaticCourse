@@ -14,6 +14,7 @@ class Product(models.Model):
 
 
 class Student(models.Model):
+    id = models.AutoField(primary_key=True)
     username = models.CharField(max_length=100, unique=True)
     password = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
@@ -27,6 +28,7 @@ class Student(models.Model):
     def __str__(self):
         return self.username
 class Booking(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     phone = models.CharField(max_length=15)  # Adjust the max_length as needed
     description = models.TextField(blank=True, null=True)

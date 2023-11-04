@@ -18,7 +18,8 @@
           <hr>
           <div class="row">
             <div class="col-md-12">
-              <form>
+              <form method="POST">
+                {% csrf_token %}
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="email"
