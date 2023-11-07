@@ -28,6 +28,7 @@
         </label>
       </li>
       <li>
+        {% if request.user.is_authenticated%}
         <div class="dropdown">
           <a class="dropdown-toggle" href="javascript:" data-toggle="dropdown"><i
               class="icon feather icon-bell"></i></a>
@@ -80,7 +81,9 @@
           </div>
         </div>
       </li>
+      {% endif %}
       <li>
+        {% if request.user.is_authenticated %}
         <div class="dropdown drp-user">
           <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">
             <i class="icon feather icon-settings"></i>
@@ -93,6 +96,7 @@
                     <li class="text-c-green">{{ group.name }}</li>
                 {% endfor %}
             </ul></span>
+            {% endif %}
               {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                 <a href="{% url 'admin:logout' %}" class="dud-logout" title="Logout">
@@ -103,15 +107,17 @@
                 </a>
               {% endif %}
             </div>
+            {% if request.user.is_authenticated %}
             <ul class="pro-body">
-              <li><a href="#" class="dropdown-item"><i class="feather icon-settings"></i>
-                  Settings</a></li>
+              {% comment %} <li><a href="#" class="dropdown-item"><i class="feather icon-settings"></i>
+                  Settings</a></li> {% endcomment %}
               <li><a href="{% url 'profile' %}" class="dropdown-item"><i class="feather icon-user"></i>
                   Profile</a></li>
-              <li><a href="#" class="dropdown-item"><i class="feather icon-mail"></i> My
-                  Messages</a></li>
-              <li><a href="#" class="dropdown-item"><i class="feather icon-lock"></i> Lock
-                  Screen</a></li>
+              {% comment %} <li><a href="#" class="dropdown-item"><i class="feather icon-mail"></i> My
+                  Messages</a></li> {% endcomment %}
+              {% comment %} <li><a href="#" class="dropdown-item"><i class="feather icon-lock"></i> Lock
+                  Screen</a></li> {% endcomment %}
+              {% endif %}
               {% if request.user.is_authenticated %}
               <li>
                 {% if request.user.is_superuser %}

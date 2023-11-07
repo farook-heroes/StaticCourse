@@ -7,7 +7,7 @@
 {% block content %}
   <!-- [ Main Content ] start -->
   <div class="row">
-    
+    {% if request.user.is_authenticated %}
     <!--[ daily sales section ] start-->
     <div class="col-md-6 col-xl-4">
       <div class="card daily-sales">
@@ -78,7 +78,7 @@
         </div>
       </div>
     </div>
-
+{% endif %}
 
 
   <div class="row">
@@ -92,11 +92,7 @@
          
         </div>
         <div class="card-block">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          <p> Encouraging students to participate in hands-on activities, discussions, and projects to promote critical thinking and problem-solving.Fostering student engagement through discussions, group work, and collaborative projects, allowing them to learn from peers and apply their knowledge. Integrating practical, real-world examples and scenarios into the curriculum to show the relevance of the subject matter.
           </p>
         </div>
       </div>

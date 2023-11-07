@@ -114,7 +114,8 @@
 										<ul class="nav menu">
 											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
-													<li><a href="index.html">Home Page 1</a></li>
+													<li><a href="{% url "index" %}">User Page</a></li>
+													<li><a href="/admin">Admin Page</a></li>
 												</ul>
 											</li>
 											<li><a href="#">Teachers</a></li>
@@ -148,14 +149,17 @@
 		<style>
 			#your-class{
 				background-image: url("{% static 'brand/img/education.jpg' %}");
+				opacity: 0.8; 
 			}
 			#my-class
 			{
 				background-image: url("{% static 'brand/img/bio-science.jpg' %}");
+				opacity: 0.8; 
 			}
 			#our-class
 			{
 				background-image: url("{% static 'brand/img/virus-cells.jpg' %}");
+				opacity: 0.8; 
 			}
 		</style>
 		<section class="slider">
@@ -168,9 +172,9 @@
 							<div class="col-lg-7">
 								<div class="text">
 									<h1>Start To <span>Believe </span> Education <span>Knowledge</span></h1>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p>
+									{% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p> {% endcomment %}
 									<div class="button">
-										<a href="#" class="btn">Get Appointment</a>
+										<a href="#" class="btn">Get Scheduled</a>
 										<a href="#" class="btn primary">Learn More</a>
 									</div>
 								</div>
@@ -187,9 +191,9 @@
 							<div class="col-lg-7">
 								<div class="text">
 									<h1>Experiment <span>Learning </span> Fun <span>With Doing</span></h1>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p>
+									{% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p> {% endcomment %}
 									<div class="button">
-										<a href="#" class="btn">Get Appointment</a>
+										<a href="#" class="btn">Get Scheduled</a>
 										<a href="#" class="btn primary">About Us</a>
 									</div>
 								</div>
@@ -205,9 +209,9 @@
 							<div class="col-lg-7">
 								<div class="text">
 									<h1>Enjoy <span>Learning </span>Advanced <span>Way</span></h1>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p>
+									{% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p> {% endcomment %}
 									<div class="button">
-										<a href="#" class="btn">Get Appointment</a>
+										<a href="#" class="btn">Get Scheduled</a>
 										<a href="#" class="btn primary">Conatct Now</a>
 									</div>
 								</div>
@@ -233,9 +237,9 @@
 										<i class="fa fa-area-chart"></i>
 									</div>
 									<div class="single-content">
-										<span>Lorem Amet</span>
+										{% comment %} <span>Lorem Amet</span> {% endcomment %}
 										<h4>High Earning Skill</h4>
-										<p>Lorem ipsum sit amet consectetur adipiscing elit. Vivamus et erat in lacus convallis sodales.</p>
+										<p>A high-earning skill is an expertise in demand that can lead to significant income. Professions like software development, data science, and healthcare specialties are examples of such skills, offering lucrative career opportunities.</p>
 										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
 									</div>
 								</div>
@@ -249,9 +253,10 @@
 										<i class="icofont-prescription"></i>
 									</div>
 									<div class="single-content">
-										<span>Fusce Porttitor</span>
+										{% comment %} <span>Fusce Porttitor</span> {% endcomment %}
 										<h4>Schedule the Learning AnyTime</h4>
-										<p>Lorem ipsum sit amet consectetur adipiscing elit. Vivamus et erat in lacus convallis sodales.</p>
+										<p>
+											"Scheduled learning anywhere" means the ability to plan and participate in educational activities from any location, often facilitated by online courses and mobile learning platforms. This flexibility empowers individuals to learn on their terms, accommodating their schedules and locations for a personalized learning experience</p>
 										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
 									</div>
 								</div>
@@ -265,7 +270,7 @@
 										<i class="icofont-ui-clock"></i>
 									</div>
 									<div class="single-content">
-										<span>Donec luctus</span>
+										{% comment %} <span>Donec luctus</span> {% endcomment %}
 										<h4>Schedule Hours</h4>
 										<ul class="time-sidual">
 											<li class="day">Monday - Friday <span>8.00-20.00</span></li>
@@ -290,8 +295,8 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>We Are Welcoming The Learners</h2>
-							<img src="{% static "brand/img/section-image.jpg" %}"alt="#">
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<img src="{% static "brand/img/section-img.png" %}"alt="#">
+							<p>Intrested are welcomed with warm hands in our institution.</p>
 						</div>
 					</div>
 				</div>
@@ -303,7 +308,7 @@
 								<i class='iconfont icofont-trophy'></i>
 							</div>
 							<h3>Train the Champions</h3>
-							<p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
+							<p>This approach aims to support and cultivate future leaders and high-achievers, helping them reach their full potential.</p>
 						</div>
 						<!-- End Single features -->
 					</div>
@@ -314,7 +319,7 @@
 								<i class="icofont icofont-education"></i>
 							</div>
 							<h3>Quality Education</h3>
-							<p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
+							<p> It emphasizes rigorous academic standards, well-qualified educators, a supportive learning environment, and a curriculum that prepares individuals to meet the challenges of the modern world.</p>
 						</div>
 						<!-- End Single features -->
 					</div>
@@ -325,7 +330,7 @@
 								<i class="icofont icofont-live-support"></i>
 							</div>
 							<h3>Live Support 24X7</h3>
-							<p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
+							<p>This ensures that individuals can receive help, information, or solutions to their queries or issues at any time, providing convenience and responsiveness in various service-oriented industries, including customer support, technical assistance, and online helpdesks.</p>
 						</div>
 						<!-- End Single features -->
 					</div>
@@ -387,14 +392,14 @@
 		</div>
 		<!--/ End Fun-facts -->
 		
-		<!-- Start Why choose -->
+		{% comment %} <!-- Start Why choose -->
 		<section class="why-choose section" >
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>We Extend Our Services To Work With High Level Experts</h2>
-							<img src="{% static "brand/img/JobWork.jpg" %}" alt="#">
+							<img src="{% static "brand/img/section-img.png" %}" alt="#">
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -403,76 +408,13 @@
 				
 			</div>
 		</section>
-		<!--/ End Why choose -->
+		<!--/ End Why choose --> {% endcomment %}
 		
-		<!-- Start Call to action -->
-		<section class="call-action overlay" data-stellar-background-ratio="0.5">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-12">
-						<div class="content">
-							<h2>Please Contact? Call @ 1234 56789</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dictum turpis nec gravida.</p>
-							<div class="button">
-								<a href="#" class="btn">Contact Now</a>
-								<a href="#" class="btn second">Learn More<i class="fa fa-long-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--/ End Call to action -->
 		
-		<!-- Start portfolio -->
-		<section class="portfolio section" >
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>We encrich Children for education</h2>
-							<img src="{% static "brand/img/section-img.png" %}"alt="#">
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12 col-12">
-						<div class="owl-carousel portfolio-slider">
-							<div class="single-pf">
-								<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							
-							<div class="single-pf">
-								<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							
-							<div class="single-pf">
-								<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--/ End portfolio -->
+		
+		
+		
+		
 		
 		<!-- Start service -->
 		<section class="services section">
@@ -482,7 +424,7 @@
 						<div class="section-title">
 							<h2>We Offer Knowledge With</h2>
 							<img src="{% static "brand/img/section-img.png" %}" alt="#">
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<p>It signifies our commitment to delivering valuable insights and information under the guidance of experienced professionals, ensuring you receive top-quality educational support and expertise.</p>
 						</div>
 					</div>
 				</div>
@@ -492,7 +434,8 @@
 						<div class="single-service">
 							<i class="icofont icofont-read-book"></i>
 							<h4><a href="service-details.html">Powerful Resource Bank</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<p>
+								An education site's powerful resource bank is a comprehensive repository of learning materials, offering a wide range of resources such as lesson plans, textbooks, interactive multimedia, and assessment tools. It empowers educators and students with a wealth of educational content to enhance teaching and learning experiences. </p>	
 						</div>
 						<!-- End Single Service -->
 					</div>
@@ -501,7 +444,7 @@
 						<div class="single-service">
 							<i class="icofont icofont-test-tube-alt"></i>
 							<h4><a href="service-details.html">Experimental Learning</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<p>Experiential learning is an educational approach that emphasizes learning through hands-on experiences, reflection, and active engagement. It allows learners to acquire knowledge, develop skills, and gain insights by directly participating in real-world activities, promoting a deeper understanding of the subject matter. </p>	
 						</div>
 						<!-- End Single Service -->
 					</div>
@@ -510,7 +453,7 @@
 						<div class="single-service">
 							<i class="icofont icofont-atom"></i>
 							<h4><a href="service-details.html">Strong Learning</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<p>Strong learning refers to a robust and effective learning process characterized by deep comprehension, retention, and the application of knowledge or skills. It often involves active engagement, critical thinking, and a focus on mastery rather than surface-level memorization, leading to a lasting and meaningful understanding of the subject matte </p>	
 						</div>
 						<!-- End Single Service -->
 					</div>
@@ -519,7 +462,8 @@
 						<div class="single-service">
 							<i class="icofont icofont-brainstorming"></i>
 							<h4><a href="service-details.html">Creativity Learning</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<p>
+								Creative learning is an educational approach that encourages students to think innovatively, problem-solve, and express themselves through various artistic and imaginative means. It fosters a nurturing environment for original thinking, enabling students to explore their creativity, develop unique perspectives, and apply their creative skills to their academic and personal growth. </p>	
 						</div>
 						<!-- End Single Service -->
 					</div>
@@ -528,7 +472,7 @@
 						<div class="single-service">
 							<i class="icofont icofont-certificate-alt-2"></i>
 							<h4><a href="service-details.html">Recogonised Learning</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<p>Recognized learning refers to education or training that is formally acknowledged, often through certifications, degrees, or other credentials, by educational institutions, employers, or relevant authorities. This recognition indicates that the learner has acquired specific knowledge, skills, or competencies in a manner that meets established standards and is considered valid for various purposes, such as employment or further education. </p>	
 						</div>
 						<!-- End Single Service -->
 					</div>
@@ -537,7 +481,7 @@
 						<div class="single-service">
 							<i class="icofont icofont-instrument"></i>
 							<h4><a href="service-details.html">Hands On Excersise</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<p>A hands-on exercise is a practical activity that involves actively doing something to learn or practice a skill. In the context of creative writing, it typically involves writing or crafting content to improve one's writing abilities through practical experience.</p>	
 						</div>
 						<!-- End Single Service -->
 					</div>
@@ -546,6 +490,85 @@
 		</section>
 		<!--/ End service -->
 		
+		<!-- Start portfolio -->
+		<section class="portfolio section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Testimonials</h2>
+							<img src="{% static "brand/img/section-img.png" %}"alt="#">
+							<p>
+								Testimonials are statements or endorsements written or spoken by individuals who have used a product or service and are sharing their experiences and satisfaction. They are often used to build trust and credibility for a product, service, or business by showcasing positive feedback and real-life success stories from customers or clients.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<style>
+				.testimonial-card {
+					width: 300px;
+					border: 1px solid #ccc;
+					margin: 10px;
+					padding: 10px;
+					background-color: #f9f9f9;
+					border-radius: 10px;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+				}
+		
+				.testimonial-card h3 {
+					font-size: 18px;
+					margin: 0;
+				}
+		
+				.testimonial-card p {
+					font-size: 14px;
+					margin: 10px 0;
+				}
+		
+				.testimonial-card .author {
+					font-size: 12px;
+				}
+			</style>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider">
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
+								<p  class="testimonial-card">"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+							</div>
+							
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
+								<p  class="testimonial-card">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+							</div>
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
+								<p class="testimonial-card">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
+							</div>
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
+								<p class="testimonial-card">"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+							</div>
+							
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
+								<p class="testimonial-card">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+							</div>
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
+								<p class="testimonial-card">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End portfolio -->
+
+
+
+
 		<!-- Pricing Table -->
 		<section class="pricing-table section">
 			<div class="container">
@@ -648,7 +671,24 @@
 		</section>	
 		<!--/ End Pricing Table -->
 		
-		
+		<!-- Start Call to action -->
+		<section class="call-action overlay" data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="content">
+							<h2>Please Contact? Call @ 1234 56789</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dictum turpis nec gravida.</p>
+							<div class="button">
+								<a href="#" class="btn">Contact Now</a>
+								<a href="#" class="btn second">Learn More<i class="fa fa-long-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Call to action -->
 		
 
 		
