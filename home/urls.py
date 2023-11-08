@@ -10,5 +10,6 @@ urlpatterns = [
   path('tables/', views.tables, name='tables'),
   path('calendar/', views.sample_page, name='sample_page'),
   path('tab/', views.tab_page, name='tab'),
-  path("details/<str:username>",views.details,name="details")
+  path("details/<str:username>",views.details,name="details"),
+    path('forms/form-elements/', views.form_elements, name='form_elements'),
 ]

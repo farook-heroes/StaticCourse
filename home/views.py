@@ -140,3 +140,31 @@ def tab_page(request):
     'segment': 'tab_page',
   }
     return render(request, 'pages/tabs.html', context)
+  
+  
+  
+@login_required(login_url='/accounts/login/')
+def form_elements(request):
+  print("hello")
+  context = {
+    'parent': 'form_components',
+    'segment': 'form_elements'
+  }
+  if request.method=="POST":
+    name=request.POST["email"]
+    description=request.POST['descript']
+    phone=request.POST['phno']
+    date=request.POST['date']
+    date=date.split('/')
+    date=date[2]+"-"+date[0]+"-"+date[1]
+    print(date)
+    student=Student.objects.filter(username=request.user.username)
+    booking = Booking(
+    name=name,
+    phone=phone,
+    description=description,
+    date=date,student=student[0])
+    booking.save()
+        
+  return render(request, 'pages/form_elements.html', context)
+
