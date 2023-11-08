@@ -75,7 +75,7 @@
 							<ul class="top-link">
 								<li><a href="#">About</a></li>
 								<li><a href="#">Services</a></li>
-								<li><a href="#">Contact</a></li>
+								<li><a href="contact/">Contact</a></li>
 								<li><a href="#">FAQ</a></li>
 							</ul>
 							<!-- End Contact -->
@@ -130,7 +130,7 @@
 													<li><a href="blog-single.html">Blog Details</a></li>
 												</ul>
 											</li>
-											<li><a href="contact.html">Contact Us</a></li>
+											<li><a href="contact/">Contact Us</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -149,18 +149,19 @@
 		<style>
 			#your-class{
 				background-image: url("{% static 'brand/img/education.jpg' %}");
-				opacity: 0.8; 
+				opacity: 0.7; 
 			}
 			#my-class
 			{
 				background-image: url("{% static 'brand/img/bio-science.jpg' %}");
-				opacity: 0.8; 
+				opacity: 0.7; 
 			}
 			#our-class
 			{
 				background-image: url("{% static 'brand/img/virus-cells.jpg' %}");
-				opacity: 0.8; 
+				opacity: 0.7; 
 			}
+			
 		</style>
 		<section class="slider">
 			<div class="hero-slider">
@@ -170,7 +171,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
-								<div class="text">
+								<div class="text" id="class1">
 									<h1>Start To <span>Believe </span> Education <span>Knowledge</span></h1>
 									{% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p> {% endcomment %}
 									<div class="button">
