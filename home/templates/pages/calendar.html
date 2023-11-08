@@ -1,0 +1,123 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="{% static "show/fonts/icomoon/style.css" %}">
+
+  <link href="{% static 'show/fullcalendar/packages/core/main.css' %}" rel='stylesheet' />
+  <link href="{% static 'show/fullcalendar/packages/daygrid/main.css' %}"rel='stylesheet' />
+  
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static "show/css/bootstrap.min.css" %}">
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="{% static "show/css/style.css" %}">
+
+  <title>Calendar #10</title>
+</head>
+
+  <!-- [ Main Content ] start -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>Schedules</h5>
+        </div>
+        <div class="row card-block">
+          
+            <div id='calendar'></div>
+          </div>
+            
+            
+        
+            <script src="{% static "show/js/jquery-3.3.1.min.js" %}"></script>
+            <script src="{% static "show/js/popper.min.js" %}"></script>
+            <script src="{% static "show/js/bootstrap.min.js" %}"></script>
+        
+            <script src="{% static 'show/fullcalendar/packages/core/main.js' %}"></script>
+            <script src="{% static 'show/fullcalendar/packages/interaction/main.js' %}"></script>
+            <script src="{% static 'show/fullcalendar/packages/daygrid/main.js' %}"></script>
+            <script src="{% static 'show/fullcalendar/packages/timegrid/main.js' %}"></script>
+            <script src="{% static 'show/fullcalendar/packages/list/main.js' %}"></script>
+        
+            
+        
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+        
+            var data=[]
+            async function loadJsonData() {
+              try {
+                
+                var jsUsername = "{{ username }}";
+                console.log(jsUsername)
+                var f="http://127.0.0.1:8000/details/"+jsUsername
+                console.log(f)
+                  const response = await fetch("http://127.0.0.1:8000/details/"+jsUsername) ; // Replace with the actual path to your JSON file
+                  const jsonData = await response.json();
+        
+                  // Store the JSON data in a variable
+                  data =await  jsonData;
+        
+                  // Display the JSON data
+                 console.log(data)
+              } catch (error) {
+                  console.error('Error loading JSON data:', error);
+              }
+          }
+            async function load()
+            {
+              const s=await loadJsonData()
+              const currentDate = new Date();
+        
+        // Get the individual date components (year, month, day)
+        const year = currentDate.getFullYear();
+        const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Adding 1 to month because months are zero-based
+        const day = String(currentDate.getDate()).padStart(2, '0');
+        
+        // Create a formatted date string (e.g., "yyyy-MM-dd")
+        const formattedDate = `${year}-${month}-${day}`;
+              var calendar = await new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+                height: 'parent',
+                header: {
+                  left: 'prev,next today',
+                  center: 'title',
+                  right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                },
+                defaultView: 'dayGridMonth',
+                defaultDate: formattedDate,
+                navLinks: true, // can click day/week names to navigate views
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: data['events']
+              });
+             
+             const z= await  calendar.render();
+            }
+         
+            load()
+          });
+          
+          
+            </script>
+        
+            <script src="{% static "show/js/main.js" %}"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+
+{% endblock content %}

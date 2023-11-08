@@ -62,12 +62,12 @@ def tables(request):
 
 @login_required(login_url='/accounts/login/')
 def sample_page(request):
-  
+  print("hello")
   context = {
     'segment': 'sample_page',
     "username":request.user.username
   }
-  return render(request, 'pages/sample-page.html', context)
+  return render(request, 'pages/calendar.html', context)
 
 @login_required(login_url='/accounts/login/')
 def tab_page(request):
