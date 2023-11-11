@@ -32,7 +32,8 @@ class Booking(models.Model):
     name = models.CharField(max_length=255)
     phone = models.CharField(max_length=15)  # Adjust the max_length as needed
     description = models.TextField(blank=True, null=True)
-    date = models.DateField()
+    date = models.DateField(blank=True)
+    time=models.CharField(max_length=10)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
 
   

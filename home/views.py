@@ -16,6 +16,7 @@ from pathlib import Path
 import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+from datetime import date, time, datetime
 
 def test(request):
       return render(request,"pages/home.html")
@@ -53,7 +54,22 @@ def details(request,username):
         return JsonResponse(s)
 
 
+from django.shortcuts import render
+from django.core.mail import send_mail
 
+def test_email(request):
+    # subject = 'Test Email'
+    # message = 'This is a test email sent from a Django view.'
+    # from_email = 'endeavouredutech@zohomail.in'
+    # recipient_list = ["notation868@gmail.com"]
+
+    # send_mail(subject, message, from_email, recipient_list)
+
+    return render( request,'pages/confirm.html')
+
+
+  
+  
 def tables(request):
   context = {
     'segment': 'tables'
@@ -145,7 +161,7 @@ def tab_page(request):
   
 @login_required(login_url='/accounts/login/')
 def form_elements(request):
-  print("hello")
+  
   context = {
     'parent': 'form_components',
     'segment': 'form_elements'
@@ -155,15 +171,17 @@ def form_elements(request):
     description=request.POST['descript']
     phone=request.POST['phno']
     date=request.POST['date']
+    time=request.POST['time']
+    
     date=date.split('/')
     date=date[2]+"-"+date[0]+"-"+date[1]
-    print(date)
+    
     student=Student.objects.filter(username=request.user.username)
     booking = Booking(
     name=name,
     phone=phone,
     description=description,
-    date=date,student=student[0])
+    date=date,time=time,student=student[0])
     booking.save()
         
   return render(request, 'pages/form_elements.html', context)
