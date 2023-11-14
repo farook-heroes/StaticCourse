@@ -14,4 +14,5 @@ urlpatterns = [
   path('tab/', views.tab_page, name='tab'),
   path("details/<str:username>",views.details,name="details"),
     path('forms/form-elements/', views.form_elements, name='form_elements'),
+      path('profile/', views.profile, name='profile'),
 ]

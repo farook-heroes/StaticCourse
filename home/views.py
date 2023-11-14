@@ -85,10 +85,14 @@ def sample_page(request):
   }
   return render(request, 'pages/calendar.html', context)
 
-@login_required(login_url='/accounts/login/')
+from django.contrib.admin.views.decorators import staff_member_required
+from django.shortcuts import render
+
+
+@staff_member_required
 def tab_page(request):
     if request.method == 'POST':
-        print("hello")
+       
         username=request.POST["username"]
         password=request.POST["password"]
         role=request.POST['role']
@@ -186,3 +190,26 @@ def form_elements(request):
         
   return render(request, 'pages/form_elements.html', context)
 
+
+
+from django.forms.models import model_to_dict
+@login_required(login_url='/accounts/login/')
+def profile(request):
+  student=Student.objects.get(username=request.user.username)
+  if(request.method=="POST"):
+    student.email = request.POST["email"] 
+    student.first_name = request.POST["first_name"] 
+    student.last_name = request.POST["last_name"] 
+    student.phone_number = request.POST["phone_number"] 
+    student.age = request.POST["age"] 
+    student.address = request.POST["address"]
+    student.about_info = request.POST["about_info"]
+    print(student.about_info)
+    student.save() 
+  
+  student=model_to_dict(student)
+  context = {
+    'segment': 'profile',
+    "student":student,
+  }
+  return render(request, 'pages/profile.html', context)
