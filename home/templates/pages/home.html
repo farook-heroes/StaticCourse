@@ -83,8 +83,8 @@
 						<div class="col-lg-6 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>+880 1234 56789</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
+								<li><i class="fa fa-phone"></i>+91 8010777200 </li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">edtechendeavour@gmail.com</a></li>
 							</ul>
 							<!-- End Top Contact -->
 						</div>
@@ -118,19 +118,15 @@
 													<li><a href="/admin">Admin Page</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Teachers</a></li>
-											<li><a href="#">Services </a></li>
-											<li><a href="#">Pages <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="404.html">Methods Of Learning</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+											{% comment %} <li><a href="#">Classes</a></li> {% endcomment %}
+											<li><a href="{% url "student" %}">For Students </a></li>
+											<li><a href="{% url "teacher" %}">Join as a Teacher</a></li>
+											{% comment %} <li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													<li><a href="blog-single.html">Blog Details</a></li>
 												</ul>
-											</li>
-											<li><a href="contact/">Contact Us</a></li>
+											</li> {% endcomment %}
+											<li><a href="{% url "contact" %}">Contact Us</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -149,50 +145,57 @@
 		<style>
 			#your-class{
 				background-image: url("{% static 'brand/img/education.jpg' %}");
-				opacity: 0.7; 
+				opacity: 1; 
 			}
+			
 			#my-class
 			{
-				background-image: url("{% static 'brand/img/bio-science.jpg' %}");
+				background-image: url("{% static 'brand/img/globe.jpg' %}");
 				opacity: 0.7; 
 			}
 			#our-class
 			{
-				background-image: url("{% static 'brand/img/virus-cells.jpg' %}");
+				background-image: url("{% static 'brand/img/globe-2.jpg' %}");
 				opacity: 0.7; 
 			}
 			
-		</style>
+		</style> 
 		<section class="slider">
-			<div class="hero-slider">
+			<div class="hero">
 				<!-- Start Single Slider -->
-		
-				<div class="single-slider" id="your-class">
+			
+				
+				<div class="single-slider" >
+					 
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-7">
+							<div class="col-lg-6">
 								<div class="text" id="class1">
-									<h1>Start To <span>Believe </span> Education <span>Knowledge</span></h1>
-									{% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p> {% endcomment %}
+									
+									<h1>Educate to <span>Elevate!</span> </h1> <h1>Aspire Endeavor <span>Conquer!</span></h1>
+									<p>Get ready to embark on an educational rollercoaster at Endeavour EdTech! 🚀 From 1st to 12th grade, we infuse "Educate to Elevate!" magic, blending tech-savvy brilliance with student-centered awesomeness. Join our learning extravaganza where education meets innovation, making studies an absolute thrill ride! </p>
 									<div class="button">
-										<a href="#" class="btn">Get Scheduled</a>
+										<a href="{% url "index" %}" class="btn">Get Scheduled</a>
 										<a href="#" class="btn primary">Learn More</a>
 									</div>
 								</div>
+							</div>
+							<div class="col-lg-6" style="height:100px, width:100px">
+								<div class="animContainer" id="animContainer"> </div> 
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- End Single Slider -->
-				<!-- Start Single Slider -->
+			{% comment %} <!-- Start Single Slider -->
 				
 				<div class="single-slider" id="my-class" >
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>Experiment <span>Learning </span> Fun <span>With Doing</span></h1>
-									{% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p> {% endcomment %}
+									<h1>Educate to <span>Elevate!</span> </h1> <h1>Aspire Endeavor <span>Conquer!</span></h1>
+									<p>Get ready to embark on an educational rollercoaster at Endeavour EdTech! 🚀 From 1st to 12th grade, we infuse "Educate to Elevate!" magic, blending tech-savvy brilliance with student-centered awesomeness. Join our learning extravaganza where education meets innovation, making studies an absolute thrill ride! </p>
 									<div class="button">
 										<a href="#" class="btn">Get Scheduled</a>
 										<a href="#" class="btn primary">About Us</a>
@@ -209,8 +212,8 @@
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>Enjoy <span>Learning </span>Advanced <span>Way</span></h1>
-									{% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p> {% endcomment %}
+									<h1>Educate to <span>Elevate!</span> </h1> <h1>Aspire Endeavor <span>Conquer!</span></h1>
+									<p>Get ready to embark on an educational rollercoaster at Endeavour EdTech! 🚀 From 1st to 12th grade, we infuse "Educate to Elevate!" magic, blending tech-savvy brilliance with student-centered awesomeness. Join our learning extravaganza where education meets innovation, making studies an absolute thrill ride! </p>
 									<div class="button">
 										<a href="#" class="btn">Get Scheduled</a>
 										<a href="#" class="btn primary">Conatct Now</a>
@@ -219,13 +222,13 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>  {% endcomment %}
 				<!-- End Single Slider -->
 			</div>
 		</section>
 		<!--/ End Slider Area -->
 		
-		<!-- Start Schedule Area -->
+		{% comment %} <!-- Start Schedule Area -->
 		<section class="schedule">
 			<div class="container">
 				<div class="schedule-inner">
@@ -238,7 +241,7 @@
 										<i class="fa fa-area-chart"></i>
 									</div>
 									<div class="single-content">
-										{% comment %} <span>Lorem Amet</span> {% endcomment %}
+										 <span>Lorem Amet</span>
 										<h4>High Earning Skill</h4>
 										<p>A high-earning skill is an expertise in demand that can lead to significant income. Professions like software development, data science, and healthcare specialties are examples of such skills, offering lucrative career opportunities.</p>
 										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
@@ -254,7 +257,7 @@
 										<i class="icofont-prescription"></i>
 									</div>
 									<div class="single-content">
-										{% comment %} <span>Fusce Porttitor</span> {% endcomment %}
+									<span>Fusce Porttitor</span> 
 										<h4>Schedule the Learning AnyTime</h4>
 										<p>
 											"Scheduled learning anywhere" means the ability to plan and participate in educational activities from any location, often facilitated by online courses and mobile learning platforms. This flexibility empowers individuals to learn on their terms, accommodating their schedules and locations for a personalized learning experience</p>
@@ -271,7 +274,7 @@
 										<i class="icofont-ui-clock"></i>
 									</div>
 									<div class="single-content">
-										{% comment %} <span>Donec luctus</span> {% endcomment %}
+										<span>Donec luctus</span> 
 										<h4>Schedule Hours</h4>
 										<ul class="time-sidual">
 											<li class="day">Monday - Friday <span>8.00-20.00</span></li>
@@ -287,7 +290,7 @@
 				</div>
 			</div>
 		</section>
-		<!--/End Start schedule Area -->
+		<!--/End Start schedule Area --> {% endcomment %}
 
 		<!-- Start Feautes -->
 		<section class="Feautes section">
@@ -339,8 +342,157 @@
 			</div>
 		</section>
 		<!--/ End Feautes -->
-		
-		<!-- Start Fun-facts -->
+		{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styled Cards</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+  .card-container {
+    padding: 20px;
+  }
+
+  .card {
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top right, #ffffff, #ffffff00);
+    z-index: 0;
+    border-radius: 20px;
+  }
+
+  .card img.card-img-top {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 1;
+  }
+
+  .card-body {
+    z-index: 1;
+    position: relative;
+    padding: 100px 20px 20px;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .card-text {
+    margin-bottom: 25px;
+    color: #555;
+  }
+
+  .btn {
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn:hover {
+    background-color: #ddd;
+	color:#FFFFFF;
+    border: 1px solid #ccc;
+  }
+
+  /* Specific styles for each card */
+  .card-1 {
+    background: #FFC0CB; /* Placeholder gradient for RoboCHAMPS */
+  }
+  .card-1 img {
+	width: 100px; /* Set your desired width */
+	height: 100px; /* Set your desired height */
+	opacity:0.5;
+	
+  }
+  .card-2 img {
+	width: 100px; /* Set your desired width */
+	height: 100px;
+	opacity:0.5;
+	 /* Set your desired height */
+  }
+  .card-2 {
+    background: #ADD8E6; /* Placeholder gradient for CodeCHAMPS */
+  }
+  .card-3 img {
+	width: 100px; /* Set your desired width */
+	height: 100px;
+	opacity:0.5; /* Set your desired height */
+  }
+  
+  .card-3 {
+    background: #90EE90; /* Placeholder gradient for FinCHAMPS */
+  }
+</style>
+</head>
+<body>
+
+<div class="container card-container">
+  <div class="row">
+    <!-- RoboCHAMPS Card -->
+    <div class="col-md-4">
+      <div class="card card-1">
+        <img class="card-img-top" src="{% static "brand/img/robot_icon.png" %}" alt="RoboCHAMPS logo">
+        <div class="card-body">
+          <h5 class="card-title text-danger">RoboCHAMPS</h5>
+          <p class="card-text">Unleash your robotics genius. Innovate. Tinker. Experiment.</p>
+          <a href="#" class="btn btn-light">Explore Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- CodeCHAMPS Card -->
+    <div class="col-md-4">
+      <div class="card card-2">
+        <img class="card-img-top" src="{% static "brand/img/program_icon.png" %}" alt="CodeCHAMPS logo">
+        <div class="card-body">
+          <h5 class="card-title text-primary">CodeCHAMPS</h5>
+          <p class="card-text">Code with confidence. Build apps. Innovate. Succeed.</p>
+          <a href="#" class="btn btn-light">Explore Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- FinCHAMPS Card -->
+    <div class="col-md-4">
+      <div class="card card-3">
+        <img class="card-img-top" src="{% static "brand/img/fin_icon.png" %}" alt="FinCHAMPS logo">
+        <div class="card-body">
+          <h5 class="card-title text-success">FinCHAMPS</h5>
+          <p class="card-text">Ensure your child's financial success with simulation-based money classes.</p>
+          <a href="#" class="btn btn-light">Explore Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+		 {% endcomment %}
+		{% comment %} <!-- Start Fun-facts -->
 		<div id="fun-facts" class="fun-facts section overlay">
 			<div class="container">
 				<div class="row">
@@ -391,7 +543,7 @@
 				</div>
 			</div>
 		</div>
-		<!--/ End Fun-facts -->
+		<!--/ End Fun-facts --> {% endcomment %}
 		
 		{% comment %} <!-- Start Why choose -->
 		<section class="why-choose section" >
@@ -490,6 +642,46 @@
 			</div>
 		</section>
 		<!--/ End service -->
+
+
+		{% comment %} <!--/ Start Language Slider -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12 col-12">
+					<div class="owl-carousel portfolio-slider">
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
+							<p  class="testimonial-card">"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+						</div>
+						
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
+							<p  class="testimonial-card">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+						</div>
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
+							<p class="testimonial-card">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
+						</div>
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
+							<p class="testimonial-card">"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+						</div>
+						
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
+							<p class="testimonial-card">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+						</div>
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
+							<p class="testimonial-card">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		<!--/ End Language Slider--> {% endcomment %}
+
 		
 		<!-- Start portfolio -->
 		<section class="portfolio section" >
@@ -506,6 +698,33 @@
 				</div>
 			</div>
 			<style>
+				.testimonial-container {
+					text-align: center;
+				  }
+				  
+				  .student-image {
+					cursor: pointer;
+					border-radius: 50%;
+					width: 150px;
+					height: 150px;
+					object-fit: cover;
+				  }
+				  
+				  .testimonial-card {
+					visibility:hidden;
+					padding: 20px;
+					background-color: #f4f4f4;
+					border-radius: 8px;
+					margin-top: 20px;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				  }
+				  
+				  .testimonial-card p{
+					margin-bottom: 10px;
+					font-weight: bold;
+				  }
+			</style>
+			{% comment %} <style>
 				.testimonial-card {
 					width: 300px;
 					border: 1px solid #ccc;
@@ -529,36 +748,45 @@
 				.testimonial-card .author {
 					font-size: 12px;
 				}
-			</style>
+			</style> {% endcomment %}
+	
+			
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12 col-12">
 						<div class="owl-carousel portfolio-slider">
 							<div class="single-pf">
 								<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
-								<p  class="testimonial-card">"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+								<p  class="testimonial-card font-weight-bold" >"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
 							</div>
-							
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf2.jpg" %}" alt="#">
+								<p  class="testimonial-card font-weight-bold" id="testimonialCard">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+							</div>
 							<div class="single-pf">
 								<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
-								<p  class="testimonial-card">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+								<p  class="testimonial-card font-weight-bold" id="testimonialCard">"Choosing this institution was the best decision of my academic journey. The faculty's dedication to student success is unparalleled. The hands-on learning experiences and supportive community have truly shaped my growth."</p>
 							</div>
 							<div class="single-pf">
 								<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
-								<p class="testimonial-card">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
+								<p class="testimonial-card font-weight-bold">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
 							</div>
 							<div class="single-pf">
 								<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
-								<p class="testimonial-card">"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+								<p class="testimonial-card font-weight-bold">"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+							</div>
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf2.jpg" %}" alt="#">
+								<p  class="testimonial-card font-weight-bold" id="testimonialCard">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
 							</div>
 							
 							<div class="single-pf">
 								<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
-								<p class="testimonial-card">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+								<p class="testimonial-card font-weight-bold">"Choosing this institution was the best decision of my academic journey. The faculty's dedication to student success is unparalleled. The hands-on learning experiences and supportive community have truly shaped my growth."</p>
 							</div>
 							<div class="single-pf">
 								<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
-								<p class="testimonial-card">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
+								<p class="testimonial-card font-weight-bold">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
 							</div>
 						</div>
 					</div>
@@ -570,7 +798,7 @@
 
 
 
-		<!-- Pricing Table -->
+		{% comment %} <!-- Pricing Table -->
 		<section class="pricing-table section">
 			<div class="container">
 				<div class="row">
@@ -670,7 +898,76 @@
 				</div>	
 			</div>	
 		</section>	
-		<!--/ End Pricing Table -->
+		<!--/ End Pricing Table --> {% endcomment %}
+		<!-- Start clients -->
+		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Support Multi-Language Teaching</h2>
+							<img src="{% static "brand/img/section-img.png" %}" alt="#">
+							<p>
+								"We teach all class 1-12, We provide seamless user experiences with multi-language support on our platform, ensuring accessibility and inclusivity for a diverse audience. From dynamic content translation to user-friendly language toggles, we tailor the experience to meet the preferences of our global users."</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<style>
+			/* Center the text */
+			.single-clients h3{
+			  text-align: center;
+			}
+		
+		  </style>
+<div class="clients">
+	<div class="container">
+		<div class="slider">
+			<div class="col-lg-12 col-md-12 col-12">
+				<div class="owl-carousel clients-slider">
+					<div class="single-clients">
+						<img src="https://wallpapers.com/images/hd/arabic-background-dfbtv1j4iivp4zbk.jpg"  style="height:140px"  alt="#">
+						<h3>Arabic</h3>
+					</div>
+					<div class="single-clients">
+						<img src="https://www.instrucko.com/_static/images/hindi.svg"  alt="#">
+						<h3>Hindi</h3>
+					</div>
+					<div class="single-clients">
+						<img src="https://i.pngimg.me/thumb/f/720/comrawpixel7374398.jpg" style="height:150px" alt="#">
+						<h3>English</h3>
+					</div>
+					<div class="single-clients">
+						<img src="https://www.instrucko.com/_static/images/french.svg" alt="#">
+						<h3>French</h3>
+					</div>
+					<div class="single-clients">
+						<img src="https://wallpapers.com/images/hd/arabic-background-dfbtv1j4iivp4zbk.jpg"  style="height:140px"  alt="#">
+						<h3>Arabic</h3>
+					</div>
+					<div class="single-clients">
+					<img src="https://www.instrucko.com/_static/images/hindi.svg"  alt="#">
+						<h3>Hindi</h3>
+					</div>
+					 <div class="single-clients">
+						<img src="https://i.pngimg.me/thumb/f/720/comrawpixel7374398.jpg" style="height:140px"  alt="#">
+						<h3>English</h3>
+					</div>
+					<div class="single-clients">
+						<img src="https://www.instrucko.com/_static/images/french.svg" alt="#">
+						<h3>French</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--/Ens clients -->
+<br>
+<br>
 		
 		<!-- Start Call to action -->
 		<section class="call-action overlay" data-stellar-background-ratio="0.5">
@@ -678,8 +975,8 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="content">
-							<h2>Please Contact? Call @ 1234 56789</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dictum turpis nec gravida.</p>
+							<h2>Please Contact? Call @8010777200</h2>
+							{% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dictum turpis nec gravida.</p> {% endcomment %}
 							<div class="button">
 								<a href="#" class="btn">Contact Now</a>
 								<a href="#" class="btn second">Learn More<i class="fa fa-long-arrow-right"></i></a>
@@ -702,7 +999,7 @@
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>About Us</h2>
-								<p>Lorem ipsum dolor sit am consectetur adipisicing elit do eiusmod tempor incididunt ut labore dolore magna.</p>
+								<p>Welcome to Endeavour Edtech, where education meets innovation! At Endeavour, we are passionate about revolutionizing the learning experience through cutting-edge technology. Our mission is to empower learners of all ages to thrive in a rapidly evolving digital world.</p>
 								<!-- Social -->
 								<ul class="social">
 									<li><a href="#"><i class="icofont-facebook"></i></a></li>
@@ -742,7 +1039,7 @@
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>Open Hours</h2>
-								<p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+								{% comment %} <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p> {% endcomment %}
 								<ul class="time-sidual">
 									<li class="day">Monday - Friday <span>8.00-20.00</span></li>
 									<li class="day">Saturday <span>9.00-18.30</span></li>
@@ -753,7 +1050,7 @@
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>Newsletter</h2>
-								<p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+								<p>subscribe to our newsletter to get  news in your inbox..</p>
 								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
 									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
 										onblur="this.placeholder = 'Your email address'" required="" type="email">
@@ -780,7 +1077,8 @@
 			<!--/ End Copyright -->
 		</footer>
 		<!--/ End Footer Area -->
-		
+		<!-- Scripts -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script> 
 		<!-- jquery Min JS -->
         <script src="{% static "brand/js/jquery.min.js" %}"></script>
 		<!-- jquery Migrate JS -->
@@ -816,7 +1114,7 @@
 		<!-- Magnific Popup JS -->
 		<script src="{% static "brand/js/jquery.magnific-popup.min.js" %}"></script>
 		<!-- Counter Up CDN JS -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<script src="{% static "brand/js/waypoints.min.js" %}"></script>
 		<!-- Bootstrap JS -->
 		<script src="{% static "brand/js/bootstrap.min.js" %}"></script>
 		<!-- Main JS -->

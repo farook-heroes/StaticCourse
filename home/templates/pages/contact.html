@@ -86,8 +86,8 @@
 						<div class="col-lg-6 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>+880 1234 56789</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
+								<li><i class="fa fa-phone"></i>+91 8010777200 </li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:edtechendeavour@gmail.com">edtechendeavour@gmail.com</a></li>
 							</ul>
 							<!-- End Top Contact -->
 						</div>
@@ -115,25 +115,21 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="{% url "test" %}">Home <i class="icofont-rounded-down"></i></a>
+											<li ><a href="#">Home <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													<li><a href="{% url "index" %}">User Page</a></li>
 													<li><a href="/admin">Admin Page</a></li>
 												</ul>
 											</li>
-											<li><a href="#">teachers </a></li>
-											<li><a href="#">Services </a></li>
-											<li><a href="#">Pages <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="404.html">Methods of learning</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+											<li><a href="#">Classes</a></li>
+											<li><a href="{% url "student" %}">For Students </a></li>
+											<li><a href="{% url "teacher" %}">Join as a Teacher</a></li>
+											{% comment %} <li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													<li><a href="blog-single.html">Blog Details</a></li>
 												</ul>
-											</li>
-											<li><a href="{% url "contact" %}">Contact Us</a></li>
+											</li> {% endcomment %}
+											<li class="active"><a href="{% url "contact" %}">Contact Us</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -227,13 +223,13 @@
 							<div class="single-info">
 								<i class="icofont icofont-ui-call"></i>
 								<div class="content">
-									<h3>+(000) 1234 56789</h3>
-									<p>info@company.com</p>
+									<h3>+(91)8010777200</h3>
+									<p>edtechendeavour@gmail.com</p>
 								</div>
 							</div>
 						</div>
 						<!--/End single-info -->
-						<!-- single-info -->
+						{% comment %} <!-- single-info -->
 						<div class="col-lg-4 col-12 ">
 							<div class="single-info">
 								<i class="icofont-google-map"></i>
@@ -243,7 +239,7 @@
 								</div>
 							</div>
 						</div>
-						<!--/End single-info -->
+						<!--/End single-info --> {% endcomment %}
 						<!-- single-info -->
 						<div class="col-lg-4 col-12 ">
 							<div class="single-info">
@@ -270,7 +266,7 @@
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>About Us</h2>
-								{% comment %} <p>Lorem ipsum dolor sit am consectetur adipisicing elit do eiusmod tempor incididunt ut labore dolore magna.</p> {% endcomment %}
+								<p>Welcome to Endeavour Edtech, where education meets innovation! At Endeavour, we are passionate about revolutionizing the learning experience through cutting-edge technology. Our mission is to empower learners of all ages to thrive in a rapidly evolving digital world.</p>
 								<!-- Social -->
 								<ul class="social">
 									<li><a href="#"><i class="icofont-facebook"></i></a></li>
@@ -310,7 +306,7 @@
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>Open Hours</h2>
-								
+								{% comment %} <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p> {% endcomment %}
 								<ul class="time-sidual">
 									<li class="day">Monday - Friday <span>8.00-20.00</span></li>
 									<li class="day">Saturday <span>9.00-18.30</span></li>
@@ -321,7 +317,7 @@
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>Newsletter</h2>
-								<p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+								<p>subscribe to our newsletter to get news in your inbox.. </p>
 								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
 									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
 										onblur="this.placeholder = 'Your email address'" required="" type="email">
@@ -339,7 +335,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a> </p>
+								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">Edtech Endeavour</a> </p>
 							</div>
 						</div>
 					</div>
@@ -348,7 +344,11 @@
 			<!--/ End Copyright -->
 		</footer>
 		<!--/ End Footer Area -->
-		
+
+		<!-- Scripts -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script> 
+<!-- Counter Up CDN JS -->
+<script src="{% static "brand/js/waypoints.min.js" %}"></script>
 		<!-- jquery Min JS -->
         <script src=" {% static "brand/js/jquery.min.js" %}"></script>
 		<!-- jquery Migrate JS -->
@@ -383,14 +383,9 @@
 		<script src=" {% static "brand/js/wow.min.js" %}"></script>
 		<!-- Magnific Popup JS -->
 		<script src=" {% static "brand/js/jquery.magnific-popup.min.js" %}"></script>
-		<!-- Counter Up CDN JS -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-		<!-- Google Map API Key JS -->
-		<script src="https://maps.google.com/maps/api/js?key=AIzaSyDGqTyqoPIvYxhn_Sa7ZrK5bENUWhpCo0w"></script>
-		<!-- Gmaps JS -->
-		<script src=" {% static "brand/js/gmaps.min.js" %}"></script>
-		<!-- Map Active JS -->
-		<script src=" {% static "brand/js/map-active.js" %}"></script>
+		
+	
+		
 		<!-- Bootstrap JS -->
 		<script src=" {% static "brand/js/bootstrap.min.js" %}"></script>
 		<!-- Main JS -->

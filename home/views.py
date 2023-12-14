@@ -22,8 +22,10 @@ def test(request):
       return render(request,"pages/home.html")
 def contact(request):
       return render(request,"pages/contact.html")
-
-
+def teachers(request):
+      return render(request,"pages/Teachers.html")
+def student(request):
+      return render(request,"pages/Student.html")
 
 def index(request):
   

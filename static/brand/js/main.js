@@ -90,7 +90,24 @@ Version:	1.1
 			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 			dots:false,
 		});
+		var animation = bodymovin.loadAnimation({
+			container: document.getElementById('animContainer'),
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+			path: 'https://assets9.lottiefiles.com/packages/lf20_5n8yfkac.json' ,// lottie file path
 
+			rendererSettings: {
+				preserveAspectRatio: 'xMidYMid meet', // Optional setting for SVG renderer
+				scaleMode: 'noScale', // Optional setting for canvas renderer
+				clearCanvas: true, // Optional setting for canvas renderer
+				progressiveLoad: true, // Optional setting for better performance
+				hideOnTransparent: true, // Optional setting for hiding elements on a transparent background
+				imagePreserveAspectRatio: 'xMidYMid meet', // Optional setting for image elements
+				progressiveLoad: true, // Optional setting for progressive loading
+			},
+		  })
+		
 		/*===============================
 			Testimonial Slider JS
 		=================================*/ 
@@ -162,31 +179,32 @@ Version:	1.1
 		/*===============================
 			Clients Slider JS
 		=================================*/ 
-		$('.clients-slider').owlCarousel({
-			items:5,
-			autoplay:true,
-			autoplayTimeout:3500,
-			margin:15,
-			smartSpeed: 400,
-			autoplayHoverPause:true,
-			loop:true,
-			nav:false,
-			dots:false,
-			responsive:{
-				300: {
-					items:1,
-				},
-				480: {
-					items:2,
-				},
-				768: {
-					items:3,
-				},
-				1170: {
-					items:5,
-				},
-			}
-		});
+$('.clients-slider').owlCarousel({
+  items: 4,
+  autoplay: true,
+  autoplayTimeout: 3500,
+  margin: 15,
+  smartSpeed: 400,
+  autoplayHoverPause: true,
+  loop: true,
+  nav: true, // Enable navigation arrows
+  dots: false,
+  navText: ["<i class='icofont-rounded-left'></i>", "<i class='icofont-rounded-right'></i>"], // Custom navigation arrows
+  responsive: {
+    300: {
+      items: 1,
+    },
+    480: {
+      items: 2,
+    },
+    768: {
+      items: 3,
+    },
+    1170: {
+      items: 4,
+    },
+  }
+});
 		
 		/*====================================
 			Single Portfolio Slider JS
@@ -270,7 +288,30 @@ Version:	1.1
 			if(window_width > 767){
             new WOW().init();
 		}
-	
+
+
+		/*================
+			Appointment JS
+		==================*/	
+		var appointment = bodymovin.loadAnimation({
+			container: document.getElementById('appointment-image'),
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+			path: 'https://lottie.host/90b69920-7fe8-4a36-98d6-6b0c45a52d40/2Lp4wDowWU.json' ,// lottie file path
+
+			rendererSettings: {
+				preserveAspectRatio: 'xMidYMid meet', // Optional setting for SVG renderer
+				scaleMode: 'noScale', // Optional setting for canvas renderer
+				clearCanvas: true, // Optional setting for canvas renderer
+				progressiveLoad: true, // Optional setting for better performance
+				hideOnTransparent: true, // Optional setting for hiding elements on a transparent background
+				imagePreserveAspectRatio: 'xMidYMid meet', // Optional setting for image elements
+				progressiveLoad: true, // Optional setting for progressive loading
+			},
+		  })
+
+
 		/*===================
 			Scroll Up JS
 		=====================*/
@@ -303,21 +344,7 @@ Version:	1.1
 		/*====================
 			Google Maps JS
 		======================*/
-		var map = new GMaps({
-				el: '#map',
-				lat: 23.011245,
-				lng: 90.884780,
-				scrollwheel: false,
-			});
-			map.addMarker({
-				lat: 23.011245,
-				lng: 90.884780,
-				title: 'Marker with InfoWindow',
-				infoWindow: {
-				content: '<p>welcome to Medipro</p>'
-			}
 		
-		});
 	});
 	
 	/*====================

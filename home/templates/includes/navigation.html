@@ -20,6 +20,9 @@
         </div>
       </li>
     </ul>
+   
+    
+
     <ul class="navbar-nav ml-auto">
       <li>
         <label>
@@ -30,7 +33,7 @@
       <li>
         {% if request.user.is_authenticated  %}
         <div class="dropdown">
-          <a class="dropdown-toggle" href="javascript:" data-toggle="dropdown"><i
+          <a class="dropdown-toggle" href="javascript:" data-toggle="dropdown" ><i
               class="icon feather icon-bell"></i></a>
           <div class="dropdown-menu dropdown-menu-right notification">
             <div class="noti-head">
@@ -98,13 +101,15 @@
             </ul></span>
             {% endif %}
               
-                {% if request.user.is_superuser %}
-                <a href="{% url 'admin:logout' %}" class="dud-logout" title="Logout">
-                {% else %}
-                <a href="{% url 'logout' %}" class="dud-logout" title="Logout">
-                {% endif %}
-                
-                </a>
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <a href="{% url 'admin:logout' %}" class="dud-logout" title="Logout">
+            {% else %}
+            <a href="{% url 'logout' %}" class="dud-logout" title="Logout">
+            {% endif %}
+              <i class="feather icon-log-out"></i>
+            </a>
+          {% endif %}
               
             </div>
             {% if request.user.is_authenticated %}
@@ -117,6 +122,7 @@
                   Messages</a></li> {% endcomment %}
               {% comment %} <li><a href="#" class="dropdown-item"><i class="feather icon-lock"></i> Lock
                   Screen</a></li> {% endcomment %}
+                 
               {% endif %}
               {% if request.user.is_authenticated %}
               <li>
@@ -129,6 +135,8 @@
                 </a>
               </li>
               {% endif %}
+              
+              
             </ul>
           </div>
         </div>

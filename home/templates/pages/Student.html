@@ -1,0 +1,496 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Title -->
+        <title>Endeavour Edtech</title>
+		
+		<!-- Favicon -->
+        <link rel="icon" href="{% static "brand/fonts/mortar-board.svg" %}">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{% static "brand/css/bootstrap.min.css" %}">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="{% static "brand/css/nice-select.css" %}">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/font-awesome.min.css" %}">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/icofont.css" %}">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="{% static "brand/css/slicknav.min.css" %}">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/owl-carousel.css" %}">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" href="{% static "brand/css/datepicker.css" %}">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/animate.min.css" %}">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/magnific-popup.css" %}">
+		
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/normalize.css" %}">
+        <link rel="stylesheet" href="{% static "brand/style.css" %}">
+        <link rel="stylesheet" href="{% static "brand/css/responsive.css" %}">
+		
+    </head>
+    <body>
+	
+		<!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+		
+
+		<!-- Header Area -->
+		<header class="header" >
+			<!-- Topbar -->
+			<div class="topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-5 col-12">
+							<!-- Contact -->
+							<ul class="top-link">
+								<li><a href="#">About</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+							<!-- End Contact -->
+						</div>
+						<div class="col-lg-6 col-md-7 col-12">
+							<!-- Top Contact -->
+							<ul class="top-contact">
+								<li><i class="fa fa-phone"></i>+91 8010777200 </li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:edtechendeavour@gmail.com">edtechendeavour@gmail.com</a></li>
+							</ul>
+							<!-- End Top Contact -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Topbar -->
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="{% url "test" %}"><h3><span><img src="{% static "brand/fonts/mortar-board.svg" %}" width="25" height="25" alt="work"></span>Endeavour Edtech</h3></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											<li ><a href="#">Home <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="{% url "index" %}">User Page</a></li>
+													<li><a href="/admin">Admin Page</a></li>
+												</ul>
+											</li>
+											{% comment %} <li><a href="#">Classes</a></li> {% endcomment %}
+											<li class="active"><a href="{% url "student" %}">For Students </a></li>
+											<li><a href="{% url "teacher" %}">Join as a Teacher</a></li>
+											{% comment %} <li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="blog-single.html">Blog Details</a></li>
+												</ul>
+											</li> {% endcomment %}
+											<li><a href="{% url "contact" %}">Contact Us</a></li>
+										</ul>
+									</nav>
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!-- End Header Area -->
+	
+		<!-- Breadcrumbs -->
+		<div class="breadcrumbs overlay">
+			<div class="container">
+				<div class="bread-inner">
+					<div class="row">
+						<div class="col-12">
+							<h2>Student Page</h2>
+							<ul class="bread-list">
+								<li><a href="{% url "test" %}">Home</a></li>
+								<li><i class="icofont-simple-right"></i></li>
+								<li class="active">Student Page</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+	
+
+		<!-- Start Why choose -->
+		<section class="why-choose section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Elevate Your Education: Unparalleled Opportunities Await</h2>
+							<img src="{% static "brand/img/section-img.png" %}" alt="#">
+							<p>Joining our institution is an invitation to an extraordinary educational journey, where students are drawn by the prospect of a holistic and forward-thinking experience. At the heart of our appeal is a curriculum meticulously crafted to resonate with the future. We offer subjects that not only encapsulate the latest advancements but also instill the skills and knowledge demanded by an ever-evolving global landscape.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Left -->
+						<div class="choose-left">
+							<h3>Who We Are</h3>
+							<p>Our faculty, distinguished in their fields, are more than educators—they are mentors and guides on your academic voyage. Their commitment to nurturing intellectual curiosity and academic excellence creates an environment that fosters inspiration and growth. With state-of-the-art facilities and modern resources, our institution provides an immersive and innovative setting conducive to exploration and discovery. </p>
+							<p>Incorporating cutting-edge learning technologies, our institution ensures that students not only grasp traditional subjects but also acquire the digital skills essential for the modern era. Complementing academic excellence is a robust support system for career development, including internships and industry partnerships that bridge the gap between academia and the professional world. </p>
+							<div class="row">
+								<div class="col-lg-6">
+									<ul class="list">
+										<li><i class="fa fa-caret-right"></i>Cutting-Edge Curriculum </li>
+										<li><i class="fa fa-caret-right"></i>Distinguished Faculty</li>
+										<li><i class="fa fa-caret-right"></i>Personalized Mentorship</li>
+									</ul>
+								</div>
+								<div class="col-lg-6">
+									<ul class="list">
+										<li><i class="fa fa-caret-right"></i>Innovative Learning Technologies </li>
+										<li><i class="fa fa-caret-right"></i>Career Development Support</li>
+										<li><i class="fa fa-caret-right"></i>Vibrant Campus Life</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- End Choose Left -->
+					</div>
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Rights -->
+						<div class="choose-right">
+							<div class="video-image">
+								<!-- Video Animation -->
+								<div class="promo-video">
+									<div class="waves-block">
+										<div class="waves wave-1"></div>
+										<div class="waves wave-2"></div>
+										<div class="waves wave-3"></div>
+									</div>
+								</div>
+								<!--/ End Video Animation -->
+								<a href="https://www.youtube.com/watch?v=RFVXy6CRVR4" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
+							</div>
+						</div>
+						<!-- End Choose Rights -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Why choose -->
+
+
+
+		{% comment %} <!-- Start Portfolio Details Area -->
+		<section class="pf-details section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="inner-content">
+							<div class="image">
+								<div class="pf-details">
+									<img src="https://www.shutterstock.com/image-vector/online-education-design-concept-typographic-260nw-373664047.jpg" alt="#">
+								 <img src="img/call-bg.jpg" alt="#">
+									<img src="img/call-bg.jpg" alt="#">
+								</div>
+							</div>
+						<div class="date">
+								<ul>
+									<li><span>Category :</span> Heart Surgery</li>
+									<li><span>Date :</span> April 20, 2019</li>
+									<li><span>Client :</span> Suke Agency</li>
+									<li><span>Ags :</span> Typo</li>
+								</ul>
+							</div> 
+							<div class="body-text">
+								<h3>Here is the name of this project here</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
+								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna to in aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. </p>
+								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod. dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.</p>
+								<div class="share">
+									<h4>Share Now -</h4>
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Portfolio Details Area --> {% endcomment %}
+
+
+
+
+		<!-- Start Appointment -->
+		<section class="appointment">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Are Always Ready to Help You. Book An Trial Class</h2>
+							<img src="{% static "brand/img/section-img.png" %}" alt="#">
+							<p>Embarking on an educational journey with us begins with a trial class, a unique opportunity designed to showcase the distinctive features that set our institution apart.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-12">
+						<form class="form" action="#">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="name" type="text" placeholder="Name">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="email" type="email" placeholder="Email">
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12 col-12">
+									<div class="form-group">
+										<input name="phone" type="text" placeholder="Phone">
+									</div>
+								</div>
+								
+							
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input type="text" placeholder="Date" id="datepicker">
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12 col-12">
+									<div class="form-group">
+										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-md-4 col-12">
+									<div class="form-group">
+										<div class="button">
+											<button type="submit" class="btn">Book An Trial Class</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-7 col-md-8 col-12">
+									<p>( We will be confirm by an Text Message )</p>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-6 col-md-12 ">
+						<div class="appointment-image" id="appointment-image">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Appointment -->
+		
+		<!-- Start Newsletter Area -->
+		<section class="newsletter section">
+			<div class="container">
+				<div class="row ">
+					<div class="col-lg-6  col-12">
+						<!-- Start Newsletter Form -->
+						<div class="subscribe-text ">
+							<h6>Sign up for newsletter</h6>
+							<p class="">We are excited to bring you the latest edition of "Insightful Connections,"<br> Our monthly newsletter aimed at keeping our community informed and engaged.</p>
+						</div>
+						<!-- End Newsletter Form -->
+					</div>
+					<div class="col-lg-6  col-12">
+						<!-- Start Newsletter Form -->
+						<div class="subscribe-form ">
+							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+								<input name="EMAIL" placeholder="Your email address" class="common-input" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Your email address'" required="" type="email">
+								<button class="btn">Subscribe</button>
+							</form>
+						</div>
+						<!-- End Newsletter Form -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /End Newsletter Area -->
+		<!-- Footer Area -->
+		<footer id="footer" class="footer ">
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>About Us</h2>
+								<p>Welcome to Endeavour Edtech, where education meets innovation! At Endeavour, we are passionate about revolutionizing the learning experience through cutting-edge technology. Our mission is to empower learners of all ages to thrive in a rapidly evolving digital world.</p>
+								<!-- Social -->
+								<ul class="social">
+									<li><a href="#"><i class="icofont-facebook"></i></a></li>
+									<li><a href="#"><i class="icofont-google-plus"></i></a></li>
+									<li><a href="#"><i class="icofont-twitter"></i></a></li>
+									<li><a href="#"><i class="icofont-vimeo"></i></a></li>
+									<li><a href="#"><i class="icofont-pinterest"></i></a></li>
+								</ul>
+								<!-- End Social -->
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer f-link">
+								<h2>Quick Links</h2>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a></li>	
+										</ul>
+									</div>
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>	
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Open Hours</h2>
+								{% comment %} <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p> {% endcomment %}
+								<ul class="time-sidual">
+									<li class="day">Monday - Friday <span>8.00-20.00</span></li>
+									<li class="day">Saturday <span>9.00-18.30</span></li>
+									<li class="day">Monday - Thursday <span>9.00-15.00</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Newsletter</h2>
+								<p>subscribe to our newsletter to get news in your inbox.. </p>
+								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Your email address'" required="" type="email">
+									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Footer Top -->
+			<!-- Copyright -->
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-12">
+							<div class="copyright-content">
+								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">Edtech Endeavour</a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Copyright -->
+		</footer>
+		<!--/ End Footer Area -->
+		<!-- Scripts -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script> 
+		<!-- jquery Min JS -->
+        <script src="{% static "brand/js/jquery.min.js" %}"></script>
+		<!-- jquery Migrate JS -->
+		<script src="{% static "brand/js/jquery-migrate-3.0.0.js" %}"></script>
+		<!-- jquery Ui JS -->
+		<script src="{% static "brand/js/jquery-ui.min.js" %}"></script>
+		<!-- Easing JS -->
+        <script src="{% static "brand/js/easing.js" %}"></script>
+		<!-- Color JS -->
+		<script src="{% static "brand/js/colors.js" %}"></script>
+		<!-- Popper JS -->
+		<script src="{% static "brand/js/popper.min.js" %}"></script>
+		<!-- Bootstrap Datepicker JS -->
+		<script src="{% static "brand/js/bootstrap-datepicker.js" %}"></script>
+		<!-- Jquery Nav JS -->
+        <script src="{% static "brand/js/jquery.nav.js" %}"></script>
+		<!-- Slicknav JS -->
+		<script src="{% static "brand/js/slicknav.min.js" %}"></script>
+		<!-- ScrollUp JS -->
+        <script src="{% static "brand/js/jquery.scrollUp.min.js" %}"></script>
+		<!-- Niceselect JS -->
+		<script src="{% static "brand/js/niceselect.js" %}"></script>
+		<!-- Tilt Jquery JS -->
+		<script src="{% static "brand/js/tilt.jquery.min.js" %}"></script>
+		<!-- Owl Carousel JS -->
+        <script src="{% static "brand/js/owl-carousel.js" %}"></script>
+		<!-- counterup JS -->
+		<script src="{% static "brand/js/jquery.counterup.min.js" %}"></script>
+		<!-- Steller JS -->
+		<script src="{% static "brand/js/steller.js" %}"></script>
+		<!-- Wow JS -->
+		<script src="{% static "brand/js/wow.min.js" %}"></script>
+		<!-- Magnific Popup JS -->
+		<script src="{% static "brand/js/jquery.magnific-popup.min.js" %}"></script>
+		<!-- Counter Up CDN JS -->
+		<script src="{% static "brand/js/waypoints.min.js" %}"></script>
+		<!-- Bootstrap JS -->
+		<script src="{% static "brand/js/bootstrap.min.js" %}"></script>
+		<!-- Main JS -->
+		<script src="{% static "brand/js/main.js" %}"></script>
+    </body>
+</html>

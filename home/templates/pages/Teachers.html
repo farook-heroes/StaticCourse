@@ -1,0 +1,786 @@
+{% load static%}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+      <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Title -->
+        <title>Endeavour Edtech</title>
+		
+		<!-- Favicon -->
+        <link rel="icon" href="{% static "brand/fonts/mortar-board.svg" %}">
+		
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{% static "brand/css/bootstrap.min.css" %}">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="{% static "brand/css/nice-select.css" %}">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/font-awesome.min.css" %}">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/icofont.css" %}">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="{% static "brand/css/slicknav.min.css" %}">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/owl-carousel.css" %}">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" href="{% static "brand/css/datepicker.css" %}">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/animate.min.css" %}">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/magnific-popup.css" %}">
+		
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/normalize.css" %}">
+        <link rel="stylesheet" href="{% static "brand/style.css" %}">
+        <link rel="stylesheet" href="{% static "brand/css/responsive.css" %}">
+		
+    </head>
+    <body>
+	
+		<!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+		
+		
+	
+		<!-- Header Area -->
+		<header class="header" >
+			<!-- Topbar -->
+			<div class="topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-5 col-12">
+							<!-- Contact -->
+							<ul class="top-link">
+								<li><a href="#">About</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+							<!-- End Contact -->
+						</div>
+						<div class="col-lg-6 col-md-7 col-12">
+							<!-- Top Contact -->
+							<ul class="top-contact">
+								<li><i class="fa fa-phone"></i>+91 8010777200 </li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:edtechendeavour@gmail.com">edtechendeavour@gmail.com</a></li>
+							</ul>
+							<!-- End Top Contact -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Topbar -->
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="{% url "test" %}"><h3><span><img src="{% static "brand/fonts/mortar-board.svg" %}" width="25" height="25" alt="work"></span>Endeavour Edtech</h3></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											<li ><a href="#">Home <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="{% url "index" %}">User Page</a></li>
+													<li><a href="/admin">Admin Page</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Classes</a></li>
+											<li><a href="{% url "student" %}">For Students </a></li>
+											<li class="active"><a href="{% url "teacher" %}">Join as a Teacher</a></li>
+											{% comment %} <li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="blog-single.html">Blog Details</a></li>
+												</ul>
+											</li> {% endcomment %}
+											<li><a href="{% url "contact" %}">Contact Us</a></li>
+										</ul>
+									</nav>
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!-- End Header Area -->
+		
+		<!-- Breadcrumbs -->
+		<div class="breadcrumbs overlay">
+			<div class="container">
+				<div class="bread-inner">
+					<div class="row">
+						<div class="col-12">
+							<h2>Teacher Page</h2>
+							<ul class="bread-list">
+								<li><a href="{% url "test" %}">Home</a></li>
+								<li><i class="icofont-simple-right"></i></li>
+								<li class="active">Teacher Page</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+		<!-- Start Blog Area -->
+		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Keep up with Our Most Recent Advanced System</h2>
+							<img src="{% static "brand/img/section-img.png" %}"alt="#">
+							<p>Teacher Achievements</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="{% static "brand/img/news1.jpg" %}" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">22 Aug, 2020</div>
+									<h2><a href="#">Recognition for innovative teaching methodologies</a></h2>
+									<p class="text">Our dedicated teaching faculty stands at the forefront of educational excellence, marked by their innovative and impactful teaching methodologies. These educators have not only brought creativity and enthusiasm to the classroom but have also been recognized for their outstanding contributions to student development. Their commitment to fostering a dynamic and engaging learning environment has earned them accolades and admiration within the academic community.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="{% static "brand/img/news2.jpg" %}" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">15 Jul, 2020</div>
+									<h2><a href="blog-single.html">Awards received for outstanding contributions to student development.</a></h2>
+									<p class="text">Beyond the confines of our institution, our teachers have showcased their expertise on a global stage. Many have actively participated in national and international education conferences, sharing their insights and learning from esteemed colleagues worldwide. This exposure has not only enriched their own teaching practices but has also brought valuable perspectives back to our institution, contributing to a culture of continuous improvement.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="{% static "brand/img/news3.jpg" %}" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">05 Jan, 2020</div>
+									<h2><a href="#">Commitment to continuous improvement and high standards.</a></h2>
+									<p class="text">Awards and honors bestowed upon our teachers reflect their unwavering dedication to educational excellence. These accolades are not merely tokens of recognition but symbols of their passion for inspiring the next generation. From groundbreaking teaching strategies to personalized mentorship, our educators have consistently demonstrated a commitment to pushing the boundaries of traditional education, leaving an indelible mark on the academic landscape.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{% comment %} <!-- Start Portfolio Details Area -->
+		<section class="pf-details section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="inner-content">
+							<div class="image">
+								<div class="pf-details">
+									<img src="https://etimg.etb2bimg.com/photo/103993963.cms" alt="#">
+								</div>
+							</div>
+							<div class="date">
+								<ul>
+									
+									<li><span>Date :</span> April 20, 2019</li>
+									<li><span>Event :</span>Award Presentation</li>
+									
+								</ul>
+							</div>
+							<div class="body-text">
+								<h3>Ashirvad Water Challenge 2023: Celebrating Innovation and Success</h3>
+								<p>In a groundbreaking event, the Ashirvad Water Challenge 2023 witnessed the convergence of innovative minds dedicated to addressing water-related challenges through AI solutions. Among the notable achievements,emerged as a frontrunner, showcasing its commitment to technological excellence and societal impact.</p>
+								
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Portfolio Details Area --> {% endcomment %}
+		<div class="container">
+		<div class="row">
+			<!-- [ collapse ] start -->
+			<div class="col-lg-12">
+				<h5 class="mt-4">We Expect From Teacher</h5>
+				<hr>
+				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+				  <li class="nav-item">
+					<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+					  aria-controls="pills-home" aria-selected="true">English</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+					  aria-controls="pills-profile" aria-selected="false">Math</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+					  aria-controls="pills-contact" aria-selected="false">French</a>
+				  </li>
+				</ul>
+				<div class="tab-content" id="pills-tabContent">
+				  <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+					aria-labelledby="pills-home-tab">
+					 <!-- Paragraphs -->
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Educational Background</h5>
+        <p class="card-text">Candidates should have a degree in English, Education, or a related field.</p>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body">
+        <h5 class="card-title">Teaching Experience</h5>
+        <p class="card-text">A minimum of 2 years of teaching experience, preferably in English language instruction.</p>
+      </div>
+    </div>
+
+    <!-- List -->
+    <div class="card mt-3">
+      <div class="card-body">
+        <h5 class="card-title">Language Proficiency</h5>
+        <p class="card-text">Proficiency in English, both spoken and written, is required. Candidates may be required to
+          provide evidence of language proficiency.</p>
+      </div>
+    </div>
+
+    <!-- Ordered List -->
+    <div class="card mt-3">
+      <div class="card-body">
+        <h5 class="card-title">Certification</h5>
+        <p class="card-text">Possession of relevant teaching certifications, such as TESOL or TEFL, is preferred.</p>
+        <ol class="list-group list-group-flush">
+          <li class="list-group-item">TESOL</li>
+          <li class="list-group-item">TEFL</li>
+        </ol>
+      </div>
+    </div>
+				  </div>
+				  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+					<!-- Paragraphs -->
+    <div class="card">
+		<div class="card-body">
+		  <h5 class="card-title">Educational Background</h5>
+		  <p class="card-text">Candidates should have a degree in Mathematics, Education, or a related field.</p>
+		</div>
+	  </div>
+  
+	  <div class="card mt-3">
+		<div class="card-body">
+		  <h5 class="card-title">Teaching Experience</h5>
+		  <p class="card-text">A minimum of 2 years of teaching experience, preferably in Mathematics instruction.</p>
+		</div>
+	  </div>
+  
+	  <!-- List -->
+	  <div class="card mt-3">
+		<div class="card-body">
+		  <h5 class="card-title">Subject Knowledge</h5>
+		  <p class="card-text">Deep understanding of mathematical concepts across different grade levels.</p>
+		</div>
+	  </div>
+  
+	  <!-- Ordered List -->
+	  <div class="card mt-3">
+		<div class="card-body">
+		  <h5 class="card-title">Certification</h5>
+		  <p class="card-text">Possession of relevant teaching certifications, such as:</p>
+		  <ul class="list-group list-group-flush">
+			<li class="list-group-item">Mathematics Education Certification</li>
+			<li class="list-group-item">Math Teaching License</li>
+		  </ul>
+		</div>
+	  </div>
+  
+				  </div>
+				  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+					<div class="card">
+						<div class="card-body">
+						  <h5 class="card-title">Educational Background</h5>
+						  <p class="card-text">Candidates should have a degree in French, Education, or a related field.</p>
+						</div>
+					  </div>
+				  
+					  <div class="card mt-3">
+						<div class="card-body">
+						  <h5 class="card-title">Teaching Experience</h5>
+						  <p class="card-text">A minimum of 2 years of teaching experience, preferably in French language instruction.</p>
+						</div>
+					  </div>
+				  
+					  <!-- List -->
+					  <div class="card mt-3">
+						<div class="card-body">
+						  <h5 class="card-title">Language Proficiency</h5>
+						  <p class="card-text">Proficiency in French, both spoken and written, is required. Candidates may be required to
+							provide evidence of language proficiency.</p>
+						</div>
+					  </div>
+				  
+					  <!-- Ordered List -->
+					  <div class="card mt-3">
+						<div class="card-body">
+						  <h5 class="card-title">Certification</h5>
+						  <p class="card-text">Possession of relevant teaching certifications, such as:</p>
+						  <ul class="list-group list-group-flush">
+							<li class="list-group-item">French Language Teaching Certification</li>
+							<li class="list-group-item">Language Proficiency Test Results (if applicable)</li>
+						  </ul>
+						</div>
+					  </div>
+				  </div>
+				</div>
+			  </div>
+		
+
+		</div>
+		<br>
+		<br>
+		<a href="https://forms.gle/n9VTQVixXWF13aWn6" class="btn btn-primary text-white">To Apply</a>
+	</div>
+		<!-- Single News -->
+		<section class="news-single section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 col-12">
+						<div class="row">
+							<div class="col-12">
+								<div class="single-main">
+									<!-- News Head -->
+									<div class="news-head">
+										<img src="{% static "brand/img/blog1.jpg" %}" alt="#">
+									</div>
+									<!-- News Title -->
+									<h1 class="news-title">A collaborative and supportive work culture that fosters teamwork and professional relationships.</h1>
+									{% comment %} <!-- Meta -->
+									<div class="meta">
+										<div class="meta-left">
+											<span class="author"><a href="#"><img src="{% static "brand/img/author1.jpg" %}" alt="#">Naimur Rahman</a></span>
+											<span class="date"><i class="fa fa-clock-o"></i>03 Feb 2019</span>
+										</div>
+										<div class="meta-right">
+											<span class="comments"><a href="#"><i class="fa fa-comments"></i>05 Comments</a></span>
+											<span class="views"><i class="fa fa-eye"></i>33K Views</span>
+										</div>
+									</div> {% endcomment %}
+									<!-- News Text -->
+									<div class="news-text">
+										<p>Educational institutions recognize the pivotal role teachers play in shaping the future, and consequently, they strive to provide a range of benefits to attract and retain skilled educators. Professional development opportunities are a cornerstone, offering teachers the chance to continually refine their skills through workshops, seminars, and training sessions. Competitive compensation packages are designed not only to reflect the value of their expertise but also to demonstrate a commitment to their financial well-being. Health and wellness programs contribute to a holistic approach to teacher support, ensuring physical and mental well-being. Career advancement opportunities provide a clear trajectory for growth, with mentorship programs and pathways to leadership roles, acknowledging and nurturing the potential for progression. A collaborative work environment fosters a sense of camaraderie, making teaching an enriching and fulfilling profession. Importantly, policies promoting work-life balance underscore the institution's understanding of the importance of personal time for educators.</p>
+									
+										<div class="image-gallery">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-12">
+													<div class="single-image">
+														<img src="{% static "brand/img/blog2.jpg" %}" alt="#">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-6 col-12">
+													<div class="single-image">
+														<img src="{% static "brand/img/blog3.jpg" %}" alt="#">
+													</div>
+												</div>
+											</div>
+										</div>
+										<p>Teachers bear the critical responsibility of molding young minds and fostering an environment conducive to learning. At the core of their duties is curriculum planning, where they develop and implement lesson plans that align with educational standards and objectives. Effective classroom management is essential for maintaining a positive and inclusive environment, ensuring that students can learn and thrive. Student assessment is an ongoing task, requiring teachers to evaluate progress, provide constructive feedback, and adapt their teaching strategies based on individual needs. Teachers play a pivotal role in fostering individualized instruction, addressing the diverse learning needs of students to promote inclusivity. Communication with parents is a crucial aspect, as teachers provide updates on student performance, address concerns, and collaborate with parents for the betterment of students. Active participation in professional development is expected, ensuring teachers stay abreast of best practices and advancements in education. Collaboration with colleagues is fostered, encouraging the sharing of resources and strategies for effective teaching. Teachers also contribute to the school community through involvement in events, extracurricular activities, and committees. Their dedication to student guidance, adherence to school policies, and commitment to continuous improvement collectively contribute to the success of the educational institution.										</p>
+										<blockquote class="overlay">
+											<p>
+												In recognizing the invaluable contributions of teachers, educational institutions offer a spectrum of benefits designed to support and elevate their professional and personal well-being. Central to these benefits is the commitment to continuous professional development, where teachers are provided with opportunities for workshops, training sessions, and seminars to refine their skills and stay abreast of evolving educational methodologies. Competitive compensation packages underscore the value placed on their expertise, reflecting both the institution's commitment to financial well-being and its acknowledgment of the pivotal role teachers play in shaping the academic journey of students. Health and wellness programs further reinforce this holistic approach, prioritizing the physical and mental well-being of educators.</p>					
+										</blockquote>
+										<p>Moreover, institutions pave the way for career advancement by offering mentorship programs and pathways to leadership roles. This not only recognizes the potential for growth within the profession but also creates a sense of trajectory and achievement for teachers. A collaborative work environment fosters a positive and supportive culture, acknowledging that the synergy among educators enhances the overall learning experience. Work-life balance policies underscore the institution's understanding of the importance of personal time for teachers, emphasizing a healthy equilibrium between professional commitments and personal life. These benefits collectively contribute to creating an environment where teachers feel valued, motivated, and equipped to provide exceptional education to their students.</p>
+										<p>Teachers bear the critical responsibility of molding young minds and fostering an environment conducive to learning. At the core of their duties is curriculum planning, where they develop and implement lesson plans that align with educational standards and objectives. Effective classroom management is essential for maintaining a positive and inclusive environment, ensuring that students can learn and thrive. Student assessment is an ongoing task, requiring teachers to evaluate progress, provide constructive feedback, and adapt their teaching strategies based on individual needs. Teachers play a pivotal role in fostering individualized instruction, addressing the diverse learning needs of students to promote inclusivity. Communication with parents is a crucial aspect, as teachers provide updates on student performance, address concerns, and collaborate with parents for the betterment of students. Active participation in professional development is expected, ensuring teachers stay abreast of best practices and advancements in education. Collaboration with colleagues is fostered, encouraging the sharing of resources and strategies for effective teaching. Teachers also contribute to the school community through involvement in events, extracurricular activities, and committees. Their dedication to student guidance, adherence to school policies, and commitment to continuous improvement collectively contribute to the success of the educational institution.</p>
+									</div>
+									<div class="blog-bottom">
+										<!-- Social Share -->
+										<ul class="social-share">
+											<li class="facebook"><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+											<li class="twitter"><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+											<li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+											<li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											<li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+										</ul>
+										<!-- Next Prev -->
+										<ul class="prev-next">
+											<li class="prev"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+											<li class="next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+										</ul>
+										<!--/ End Next Prev -->
+									</div>
+								</div>
+							</div>
+							{% comment %} <div class="col-12">
+								<div class="blog-comments">
+									<h2>All Comments</h2>
+									<div class="comments-body">
+										<!-- Single Comments -->
+										<div class="single-comments">
+											<div class="main">
+												<div class="head">
+													<img src="{% static "brand/img/author1.jpg" %}" alt="#"/>
+												</div>
+												<div class="body">
+													<h4>Afsana Mimi</h4>
+													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>March 05, 2019</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
+													<p>"This institution truly values its educators! The professional development opportunities provided have been instrumental in enhancing my teaching skills, and the collaborative work environment fosters a sense of camaraderie. The commitment to work-life balance and competitive compensation further underscores the institution's dedication to the well-being of its teachers."</p>
+													<a href="#"><i class="fa fa-reply"></i>replay</a>
+												</div>
+											</div>
+										</div>		
+										<!--/ End Single Comments -->
+										<!-- Single Comments -->
+										<div class="single-comments left">
+											<div class="main">
+												<div class="head">
+													<img src="{% static "brand/img/author2.jpg" %}" alt="#"/>
+												</div>
+												<div class="body">
+													<h4>Naimur Rahman</h4>
+													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>March 05, 2019</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
+													<p>"I appreciate the myriad benefits offered by this institution. The emphasis on continuous professional development keeps us at the forefront of educational advancements. The supportive work culture and health and wellness programs contribute to a positive environment, creating a space where both educators and students thrive."</p>
+													<a href="#"><i class="fa fa-reply"></i>replay</a>
+												</div>
+											</div>
+										</div>		
+										<!--/ End Single Comments -->
+										<!-- Single Comments -->
+										<div class="single-comments">
+											<div class="main">
+												<div class="head">
+													<img src="{% static "brand/img/author3.jpg" %}" alt="#"/>
+												</div>
+												<div class="body">
+													<h4>Suriya Molharta</h4>
+													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>March 05, 2019</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
+													<p>"This institution stands out for its unwavering support of teachers. The mentorship programs and career advancement opportunities have been pivotal in my professional growth. The comprehensive benefits package, coupled with a collaborative atmosphere, reflects the institution's commitment to creating an optimal environment for effective teaching and learning."</p>
+													<a href="#"><i class="fa fa-reply"></i>replay</a>
+												</div>
+											</div>
+										</div>		
+										<!--/ End Single Comments -->											
+									</div>
+								</div>
+							</div> {% endcomment %}
+							{% comment %} <div class="col-12">
+								<div class="comments-form">
+									<h2>For Contact</h2>
+									<!-- Contact Form -->
+									<form class="form" method="post" action="mail/mail.php">
+										<div class="row">
+											<div class="col-lg-4 col-md-4 col-12">
+												<div class="form-group">
+													<i class="fa fa-user"></i>
+													<input type="text" name="first-name" placeholder="First name" required="required">
+												</div>
+											</div>
+											<div class="col-lg-4 col-md-4 col-12">
+												<div class="form-group">
+													<i class="fa fa-envelope"></i>
+													<input type="text" name="last-name" placeholder="Last name" required="required">
+												</div>
+											</div>
+											<div class="col-lg-4 col-md-4 col-12">
+												<div class="form-group">
+													<i class="fa fa-envelope"></i>
+													<input type="email" name="email" placeholder="Your Email" required="required">
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-group message">
+													<i class="fa fa-pencil"></i>
+													<textarea name="message" rows="7" placeholder="Type Your Message Here" ></textarea>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-group button">	
+													<button type="submit" class="btn primary"><i class="fa fa-send"></i>Submit Comment</button>
+												</div>
+											</div>
+										</div>
+									</form>
+									<!--/ End Contact Form -->
+								</div> {% endcomment %}
+							</div>
+						</div>
+					</div>
+					{% comment %} <div class="col-lg-4 col-12">
+						<div class="main-sidebar">
+							<!-- Single Widget -->
+							<div class="single-widget search">
+								<div class="form">
+									<input type="email" placeholder="Search Here...">
+									<a class="button" href="#"><i class="fa fa-search"></i></a>
+								</div>
+							</div>
+							<!--/ End Single Widget -->
+							<!-- Single Widget -->
+							<div class="single-widget category">
+								<h3 class="title">Blog Categories</h3>
+								<ul class="categor-list">
+									<li><a href="#">Men's Apparel</a></li>
+									<li><a href="#">Women's Apparel</a></li>
+									<li><a href="#">Bags Collection</a></li>
+									<li><a href="#">Accessories</a></li>
+									<li><a href="#">Sun Glasses</a></li>
+								</ul>
+							</div>
+							<!--/ End Single Widget -->
+							<!-- Single Widget -->
+							<div class="single-widget recent-post">
+								<h3 class="title">Recent post</h3>
+								<!-- Single Post -->
+								<div class="single-post">
+									<div class="image">
+										<img src="{% static "brand/img/blog-sidebar1.jpg" %}" alt="#">
+									</div>
+									<div class="content">
+										<h5><a href="#">We have annnocuced our new product.</a></h5>
+										<ul class="comment">
+											<li><i class="fa fa-calendar" aria-hidden="true"></i>Jan 11, 2020</li>
+											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>35</li>
+										</ul>
+									</div>
+								</div>
+								<!-- End Single Post -->
+								<!-- Single Post -->
+								<div class="single-post">
+									<div class="image">
+										<img src="{% static "brand/img/blog-sidebar2.jpg" %}" alt="#">
+									</div>
+									<div class="content">
+										<h5><a href="#">Top five way for solving teeth problems.</a></h5>
+										<ul class="comment">
+											<li><i class="fa fa-calendar" aria-hidden="true"></i>Mar 05, 2019</li>
+											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>59</li>
+										</ul>
+									</div>
+								</div>
+								<!-- End Single Post -->
+								<!-- Single Post -->
+								<div class="single-post">
+									<div class="image">
+										<img src="{% static "brand/img/blog-sidebar3.jpg" %}" alt="#">
+									</div>
+									<div class="content">
+										<h5><a href="#">We provide highly business soliutions.</a></h5>
+										<ul class="comment">
+											<li><i class="fa fa-calendar" aria-hidden="true"></i>June 09, 2019</li>
+											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>44</li>
+										</ul>
+									</div>
+								</div>
+								<!-- End Single Post -->
+							</div>
+							<!--/ End Single Widget -->
+							<!-- Single Widget -->
+							<!--/ End Single Widget -->
+							<!-- Single Widget -->
+							<div class="single-widget side-tags">
+								<h3 class="title">Tags</h3>
+								<ul class="tag">
+									<li><a href="#">business</a></li>
+									<li><a href="#">wordpress</a></li>
+									<li><a href="#">html</a></li>
+									<li><a href="#">multipurpose</a></li>
+									<li><a href="#">education</a></li>
+									<li><a href="#">template</a></li>
+									<li><a href="#">Ecommerce</a></li>
+								</ul>
+							</div>
+							<!--/ End Single Widget -->
+						</div> {% endcomment %}
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Single News -->
+		
+		<!-- Footer Area -->
+		<footer id="footer" class="footer ">
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>About Us</h2>
+								<p>Welcome to Endeavour Edtech, where education meets innovation! At Endeavour, we are passionate about revolutionizing the learning experience through cutting-edge technology. Our mission is to empower learners of all ages to thrive in a rapidly evolving digital world.</p>
+								<!-- Social -->
+								<ul class="social">
+									<li><a href="#"><i class="icofont-facebook"></i></a></li>
+									<li><a href="#"><i class="icofont-google-plus"></i></a></li>
+									<li><a href="#"><i class="icofont-twitter"></i></a></li>
+									<li><a href="#"><i class="icofont-vimeo"></i></a></li>
+									<li><a href="#"><i class="icofont-pinterest"></i></a></li>
+								</ul>
+								<!-- End Social -->
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer f-link">
+								<h2>Quick Links</h2>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a></li>	
+										</ul>
+									</div>
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>	
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Open Hours</h2>
+								{% comment %} <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p> {% endcomment %}
+								<ul class="time-sidual">
+									<li class="day">Monday - Friday <span>8.00-20.00</span></li>
+									<li class="day">Saturday <span>9.00-18.30</span></li>
+									<li class="day">Monday - Thusday <span>9.00-15.00</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Newsletter</h2>
+								<p>subscribe to our newsletter to get news in your inbox.. </p>
+								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Your email address'" required="" type="email">
+									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Footer Top -->
+			<!-- Copyright -->
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-12">
+							<div class="copyright-content">
+								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">Edtech Endeavour</a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Copyright -->
+		</footer>
+		<!--/ End Footer Area -->
+		<!-- Scripts -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script> 
+		<!-- jquery Min JS -->
+        <script src="{% static "brand/js/jquery.min.js" %}"></script>
+		<!-- jquery Migrate JS -->
+		<script src="{% static "brand/js/jquery-migrate-3.0.0.js" %}"></script>
+		<!-- jquery Ui JS -->
+		<script src="{% static "brand/js/jquery-ui.min.js" %}"></script>
+		<!-- Easing JS -->
+        <script src="{% static "brand/js/easing.js" %}"></script>
+		<!-- Color JS -->
+		<script src="{% static "brand/js/colors.js" %}"></script>
+		<!-- Popper JS -->
+		<script src="{% static "brand/js/popper.min.js" %}"></script>
+		<!-- Bootstrap Datepicker JS -->
+		<script src="{% static "brand/js/bootstrap-datepicker.js" %}"></script>
+		<!-- Jquery Nav JS -->
+        <script src="{% static "brand/js/jquery.nav.js" %}"></script>
+		<!-- Slicknav JS -->
+		<script src="{% static "brand/js/slicknav.min.js" %}"></script>
+		<!-- ScrollUp JS -->
+        <script src="{% static "brand/js/jquery.scrollUp.min.js" %}"></script>
+		<!-- Niceselect JS -->
+		<script src="{% static "brand/js/niceselect.js" %}"></script>
+		<!-- Tilt Jquery JS -->
+		<script src="{% static "brand/js/tilt.jquery.min.js" %}"></script>
+		<!-- Owl Carousel JS -->
+        <script src="{% static "brand/js/owl-carousel.js" %}"></script>
+		<!-- counterup JS -->
+		<script src="{% static "brand/js/jquery.counterup.min.js" %}"></script>
+		<!-- Steller JS -->
+		<script src="{% static "brand/js/steller.js" %}"></script>
+		<!-- Wow JS -->
+		<script src="{% static "brand/js/wow.min.js" %}"></script>
+		<!-- Magnific Popup JS -->
+		<script src="{% static "brand/js/jquery.magnific-popup.min.js" %}"></script>
+		<!-- Counter Up CDN JS -->
+		<script src="{% static "brand/js/waypoints.min.js" %}"></script>
+		<!-- Bootstrap JS -->
+		<script src="{% static "brand/js/bootstrap.min.js" %}"></script>
+		<!-- Main JS -->
+		<script src="{% static "brand/js/main.js" %}"></script>
+    </body>
+</html>

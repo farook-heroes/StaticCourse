@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -40,7 +41,7 @@
             
             
         
-            <script src="{% static "show/js/jquery-3.3.1.min.js" %}"></script>
+          <script src="{% static "show/js/jquery-3.3.1.min.js" %}"></script>
             <script src="{% static "show/js/popper.min.js" %}"></script>
             <script src="{% static "show/js/bootstrap.min.js" %}"></script>
         
@@ -53,6 +54,9 @@
             
         
             <script>
+              // Change from passive to non-passive
+
+            
               document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
         
@@ -99,17 +103,20 @@
                 defaultView: 'dayGridMonth',
                 defaultDate: formattedDate,
                 navLinks: true, // can click day/week names to navigate views
-                editable: true,
+                editable: false,
                 eventLimit: true, // allow "more" link when too many events
                 events: data['events']
               });
              
              const z= await  calendar.render();
+            
             }
-         
+           
             load()
           });
-          
+          document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        }, { passive: false });
           
             </script>
         
