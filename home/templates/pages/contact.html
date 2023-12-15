@@ -121,7 +121,7 @@
 													<li><a href="/admin">Admin Page</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Classes</a></li>
+											{% comment %} <li><a href="#">Classes</a></li> {% endcomment %}
 											<li><a href="{% url "student" %}">For Students </a></li>
 											<li><a href="{% url "teacher" %}">Join as a Teacher</a></li>
 											{% comment %} <li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
@@ -344,7 +344,9 @@
 			<!--/ End Copyright -->
 		</footer>
 		<!--/ End Footer Area -->
-
+		<script>
+			var staticPath = "{% static 'brand/img' %}";
+		</script>
 		<!-- Scripts -->
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script> 
 <!-- Counter Up CDN JS -->

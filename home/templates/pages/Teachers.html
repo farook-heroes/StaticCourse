@@ -120,7 +120,7 @@
 													<li><a href="/admin">Admin Page</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Classes</a></li>
+											{% comment %} <li><a href="#">Classes</a></li> {% endcomment %}
 											<li><a href="{% url "student" %}">For Students </a></li>
 											<li class="active"><a href="{% url "teacher" %}">Join as a Teacher</a></li>
 											{% comment %} <li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
@@ -257,6 +257,97 @@
 			</div>
 		</section>
 		<!-- End Portfolio Details Area --> {% endcomment %}
+	
+		
+		
+		<div class="container mt-5">
+		  <div class="row">
+			<div class="col-md-4">
+			  <!-- Image Column -->
+			  <img src="https://www.instrucko.com/_static/icons/learn-earn.svg" alt="Your Image" style="height:55px"/>
+			  <br>
+			  
+			  <h2>They Learn, You Earn</h2>
+			  <p>Build on your current income and receive regular payments.</p>
+			 
+			</div>
+			
+			<div class="col-md-4">
+			  <!-- Repeat the structure for the third column -->
+			  <img src="https://www.instrucko.com/_static/icons/choose-hours.svg" alt="Your Image" />
+			   <!-- Header Column -->
+			   <h2>Choose Your Hours</h2>
+			   <p>Choose where and when you work, scheduling classes around your life.</p>
+			</div>
+			
+			<div class="col-md-4">
+			  <!-- Image Column -->
+			  <img src="https://www.instrucko.com/_static/icons/no-lesson.svg" alt="Your Image" />
+			    <!-- Header Column -->
+				<h2>No Lesson Planning</h2>
+				<p>Our groundbreaking content and lesson planning keeps kids engaged.</p>
+			</div>
+			
+		  </div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<style>
+			<style>
+				/* Container styling */
+				.container {
+				  margin-top: 20px;
+				}
+			  
+				/* Tab styling */
+				.nav-pills .nav-link {
+				  color: #333;
+				  background-color: #f8f9fa;
+				  border: 1px solid #dee2e6;
+				  border-radius: 0;
+				}
+			  
+				.nav-pills .nav-link.active,
+				.nav-pills .nav-link:hover {
+				  background-color: #007bff;
+				  color: #fff;
+				}
+			  
+				/* Card styling */
+				.card {
+				  border: 1px solid rgba(0, 0, 0, 0.125);
+				  border-radius: 0;
+				}
+			  
+				/* Button styling */
+				.btn-primary {
+				  background-color: #007bff;
+				  border-color: #007bff;
+				}
+			  
+				.btn-primary:hover {
+				  background-color: #0056b3;
+				  border-color: #0056b3;
+				}
+				/* Headline styling */
+				.mt-4 {
+					padding: 10px;
+					background: linear-gradient(45deg, #007bff, #00bcd4);
+					color: #fff;
+					display: inline-block;
+					border-radius: 5px;
+					box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				  }
+			  
+				
+				.card {
+					border: 1px solid rgba(0, 0, 0, 0.125);
+					border-radius: 0;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				  }
+			  </style>
+		</style>
 		<div class="container">
 		<div class="row">
 			<!-- [ collapse ] start -->
@@ -398,7 +489,7 @@
 		<br>
 		<a href="https://forms.gle/n9VTQVixXWF13aWn6" class="btn btn-primary text-white">To Apply</a>
 	</div>
-		<!-- Single News -->
+		{% comment %} <!-- Single News -->
 		<section class="news-single section">
 			<div class="container">
 				<div class="row">
@@ -422,7 +513,7 @@
 											<span class="comments"><a href="#"><i class="fa fa-comments"></i>05 Comments</a></span>
 											<span class="views"><i class="fa fa-eye"></i>33K Views</span>
 										</div>
-									</div> {% endcomment %}
+									</div>
 									<!-- News Text -->
 									<div class="news-text">
 										<p>Educational institutions recognize the pivotal role teachers play in shaping the future, and consequently, they strive to provide a range of benefits to attract and retain skilled educators. Professional development opportunities are a cornerstone, offering teachers the chance to continually refine their skills through workshops, seminars, and training sessions. Competitive compensation packages are designed not only to reflect the value of their expertise but also to demonstrate a commitment to their financial well-being. Health and wellness programs contribute to a holistic approach to teacher support, ensuring physical and mental well-being. Career advancement opportunities provide a clear trajectory for growth, with mentorship programs and pathways to leadership roles, acknowledging and nurturing the potential for progression. A collaborative work environment fosters a sense of camaraderie, making teaching an enriching and fulfilling profession. Importantly, policies promoting work-life balance underscore the institution's understanding of the importance of personal time for educators.</p>
@@ -466,7 +557,7 @@
 										<!--/ End Next Prev -->
 									</div>
 								</div>
-							</div>
+							</div> {% endcomment %}
 							{% comment %} <div class="col-12">
 								<div class="blog-comments">
 									<h2>All Comments</h2>
@@ -557,7 +648,8 @@
 										</div>
 									</form>
 									<!--/ End Contact Form -->
-								</div> {% endcomment %}
+								</div> 
+
 							</div>
 						</div>
 					</div>
@@ -646,13 +738,14 @@
 								</ul>
 							</div>
 							<!--/ End Single Widget -->
-						</div> {% endcomment %}
+						</div> 
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> {% endcomment %}
 		<!--/ End Single News -->
-		
+		<br>
+		<br>
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
 			<!-- Footer Top -->
@@ -739,6 +832,9 @@
 			</div>
 			<!--/ End Copyright -->
 		</footer>
+		<script>
+			var staticPath = "{% static 'brand/img' %}";
+		</script>
 		<!--/ End Footer Area -->
 		<!-- Scripts -->
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script> 
