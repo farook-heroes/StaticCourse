@@ -17,16 +17,18 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 from datetime import date, time, datetime
-
+#Main Page
 def test(request):
-      return render(request,"pages/home.html")
+      return render(request,"brand/home.html")
 def contact(request):
-      return render(request,"pages/contact.html")
+      return render(request,"brand/contact.html")
 def teachers(request):
-      return render(request,"pages/Teachers.html")
+      return render(request,"brand/Teachers.html")
 def student(request):
-      return render(request,"pages/Student.html")
+      return render(request,"brand/Student.html")
 
+
+#Django Page
 def index(request):
   
       

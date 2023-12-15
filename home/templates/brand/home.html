@@ -1,0 +1,1143 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Title -->
+        <title>Endeavour Edtech</title>
+		
+		<!-- Favicon -->
+        <link rel="icon" href="{% static "brand/fonts/mortar-board.svg" %}">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS --> 
+		<link rel="stylesheet" href="{% static  "brand/css/bootstrap.min.css" %}">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="{% static  "brand/css/nice-select.css" %}">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{% static  "brand/css/font-awesome.min.css" %}">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="{% static  "brand/css/icofont.css" %}">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="{% static  "brand/css/slicknav.min.css" %}">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{% static  "brand/css/owl-carousel.css" %}">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" href="{% static "brand/css/datepicker.css"  %}">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/animate.min.css"  %}">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/magnific-popup.css"  %}">
+		
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" href="{% static "brand/css/normalize.css" %}">
+        <link rel="stylesheet" href="{% static "brand/style.css" %}">
+        <link rel="stylesheet" href="{% static "brand/css/responsive.css" %}">
+		
+    </head>
+    <body>
+	
+		<!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+		
+	
+	
+		<!-- Header Area -->
+		<header class="header" >
+			<!-- Topbar -->
+			<div class="topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-5 col-12">
+							<!-- Contact -->
+							<ul class="top-link">
+								<li><a href="#">About</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="contact/">Contact</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+							<!-- End Contact -->
+						</div>
+						<div class="col-lg-6 col-md-7 col-12">
+							<!-- Top Contact -->
+							<ul class="top-contact">
+								<li><i class="fa fa-phone"></i>+91 8010777200 </li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">edtechendeavour@gmail.com</a></li>
+							</ul>
+							<!-- End Top Contact -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Topbar -->
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="{% url "test" %}"><h3><span><img src="{% static "brand/fonts/mortar-board.svg" %}" width="25" height="25" alt="work"></span>Endeavour Edtech</h3></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="{% url "index" %}">User Page</a></li>
+													<li><a href="/admin">Admin Page</a></li>
+												</ul>
+											</li>
+											{% comment %} <li><a href="#">Classes</a></li> {% endcomment %}
+											<li><a href="{% url "student" %}">For Students </a></li>
+											<li><a href="{% url "teacher" %}">Join as a Teacher</a></li>
+											{% comment %} <li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="blog-single.html">Blog Details</a></li>
+												</ul>
+											</li> {% endcomment %}
+											<li><a href="{% url "contact" %}">Contact Us</a></li>
+										</ul>
+									</nav>
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!-- End Header Area -->
+		
+		<!-- Slider Area -->
+		<style>
+			#your-class{
+				background-image: url("{% static 'brand/img/education.jpg' %}");
+				opacity: 1; 
+			}
+			
+			#my-class
+			{
+				background-image: url("{% static 'brand/img/globe.jpg' %}");
+				opacity: 0.7; 
+			}
+			#our-class
+			{
+				background-image: url("{% static 'brand/img/globe-2.jpg' %}");
+				opacity: 0.7; 
+			}
+			
+		</style> 
+		<section class="slider">
+			<div class="hero">
+				<!-- Start Single Slider -->
+			
+				
+				<div class="single-slider" >
+					 
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="text" id="class1">
+									
+									<h1>Educate to <span>Elevate!</span> </h1> <h1>Aspire Endeavor <span>Conquer!</span></h1>
+									<p>Get ready to embark on an educational rollercoaster at Endeavour EdTech! 🚀 From 1st to 12th grade, we infuse "Educate to Elevate!" magic, blending tech-savvy brilliance with student-centered awesomeness. Join our learning extravaganza where education meets innovation, making studies an absolute thrill ride! </p>
+									<div class="button">
+										<a href="{% url "index" %}" class="btn">Get Scheduled</a>
+										<a href="#" class="btn primary">Learn More</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 mb-2">
+								<br>
+								<br>
+								<br>
+								<div style="max-width: 400px; margin: 0 auto;">
+									<video width="100%" height="auto"  controls autoplay muted loop>
+										<source src="{% static "brand/img/main.mp4"  %}" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+								  </div>
+							
+								{% comment %} <br>
+								<br>
+								<br>
+								<br>
+								<div class="animContainer mb-2" id="animContainer1"> 
+									
+								<img class="mb-2"src="{% static "brand/img/main.gif"  %}" style="height:10000px,width:4000px"alt="Animated GIF"> {% endcomment %}
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single Slider -->
+			{% comment %} <!-- Start Single Slider -->
+				
+				<div class="single-slider" id="my-class" >
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>Educate to <span>Elevate!</span> </h1> <h1>Aspire Endeavor <span>Conquer!</span></h1>
+									<p>Get ready to embark on an educational rollercoaster at Endeavour EdTech! 🚀 From 1st to 12th grade, we infuse "Educate to Elevate!" magic, blending tech-savvy brilliance with student-centered awesomeness. Join our learning extravaganza where education meets innovation, making studies an absolute thrill ride! </p>
+									<div class="button">
+										<a href="#" class="btn">Get Scheduled</a>
+										<a href="#" class="btn primary">About Us</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Start End Slider -->
+				<!-- Start Single Slider -->
+				<div class="single-slider" id="our-class">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>Educate to <span>Elevate!</span> </h1> <h1>Aspire Endeavor <span>Conquer!</span></h1>
+									<p>Get ready to embark on an educational rollercoaster at Endeavour EdTech! 🚀 From 1st to 12th grade, we infuse "Educate to Elevate!" magic, blending tech-savvy brilliance with student-centered awesomeness. Join our learning extravaganza where education meets innovation, making studies an absolute thrill ride! </p>
+									<div class="button">
+										<a href="#" class="btn">Get Scheduled</a>
+										<a href="#" class="btn primary">Conatct Now</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>  {% endcomment %}
+				<!-- End Single Slider -->
+			</div>
+		</section>
+		<!--/ End Slider Area -->
+		
+		{% comment %} <!-- Start Schedule Area -->
+		<section class="schedule">
+			<div class="container">
+				<div class="schedule-inner">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-12 ">
+							<!-- single-schedule -->
+							<div class="single-schedule first">
+								<div class="inner">
+									<div class="icon">
+										<i class="fa fa-area-chart"></i>
+									</div>
+									<div class="single-content">
+										 <span>Lorem Amet</span>
+										<h4>High Earning Skill</h4>
+										<p>A high-earning skill is an expertise in demand that can lead to significant income. Professions like software development, data science, and healthcare specialties are examples of such skills, offering lucrative career opportunities.</p>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule middle">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-prescription"></i>
+									</div>
+									<div class="single-content">
+									<span>Fusce Porttitor</span> 
+										<h4>Schedule the Learning AnyTime</h4>
+										<p>
+											"Scheduled learning anywhere" means the ability to plan and participate in educational activities from any location, often facilitated by online courses and mobile learning platforms. This flexibility empowers individuals to learn on their terms, accommodating their schedules and locations for a personalized learning experience</p>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule last">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-ui-clock"></i>
+									</div>
+									<div class="single-content">
+										<span>Donec luctus</span> 
+										<h4>Schedule Hours</h4>
+										<ul class="time-sidual">
+											<li class="day">Monday - Friday <span>8.00-20.00</span></li>
+											<li class="day">Saturday <span>9.00-18.30</span></li>
+											<li class="day">Monday - Thursday <span>9.00-15.00</span></li>
+										</ul>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/End Start schedule Area --> {% endcomment %}
+
+		<!-- Start Feautes -->
+		<section class="Feautes section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Are Welcoming The Learners</h2>
+							<img src="{% static "brand/img/section-img.png" %}"alt="#">
+							<p>Intrested are welcomed with warm hands in our institution.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class='iconfont icofont-trophy'></i>
+							</div>
+							<h3>Train the Champions</h3>
+							<p>This approach aims to support and cultivate future leaders and high-achievers, helping them reach their full potential.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="icofont icofont-education"></i>
+							</div>
+							<h3>Quality Education</h3>
+							<p> It emphasizes rigorous academic standards, well-qualified educators, a supportive learning environment, and a curriculum that prepares individuals to meet the challenges of the modern world.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features last">
+							<div class="signle-icon">
+								<i class="icofont icofont-live-support"></i>
+							</div>
+							<h3>Live Support 24X7</h3>
+							<p>This ensures that individuals can receive help, information, or solutions to their queries or issues at any time, providing convenience and responsiveness in various service-oriented industries, including customer support, technical assistance, and online helpdesks.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Feautes -->
+		{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styled Cards</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+  .card-container {
+    padding: 20px;
+  }
+
+  .card {
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top right, #ffffff, #ffffff00);
+    z-index: 0;
+    border-radius: 20px;
+  }
+
+  .card img.card-img-top {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 1;
+  }
+
+  .card-body {
+    z-index: 1;
+    position: relative;
+    padding: 100px 20px 20px;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .card-text {
+    margin-bottom: 25px;
+    color: #555;
+  }
+
+  .btn {
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn:hover {
+    background-color: #ddd;
+	color:#FFFFFF;
+    border: 1px solid #ccc;
+  }
+
+  /* Specific styles for each card */
+  .card-1 {
+    background: #FFC0CB; /* Placeholder gradient for RoboCHAMPS */
+  }
+  .card-1 img {
+	width: 100px; /* Set your desired width */
+	height: 100px; /* Set your desired height */
+	opacity:0.5;
+	
+  }
+  .card-2 img {
+	width: 100px; /* Set your desired width */
+	height: 100px;
+	opacity:0.5;
+	 /* Set your desired height */
+  }
+  .card-2 {
+    background: #ADD8E6; /* Placeholder gradient for CodeCHAMPS */
+  }
+  .card-3 img {
+	width: 100px; /* Set your desired width */
+	height: 100px;
+	opacity:0.5; /* Set your desired height */
+  }
+  
+  .card-3 {
+    background: #90EE90; /* Placeholder gradient for FinCHAMPS */
+  }
+</style>
+</head>
+<body>
+
+<div class="container card-container">
+  <div class="row">
+    <!-- RoboCHAMPS Card -->
+    <div class="col-md-4">
+      <div class="card card-1">
+        <img class="card-img-top" src="{% static "brand/img/robot_icon.png" %}" alt="RoboCHAMPS logo">
+        <div class="card-body">
+          <h5 class="card-title text-danger">RoboCHAMPS</h5>
+          <p class="card-text">Unleash your robotics genius. Innovate. Tinker. Experiment.</p>
+          <a href="#" class="btn btn-light">Explore Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- CodeCHAMPS Card -->
+    <div class="col-md-4">
+      <div class="card card-2">
+        <img class="card-img-top" src="{% static "brand/img/program_icon.png" %}" alt="CodeCHAMPS logo">
+        <div class="card-body">
+          <h5 class="card-title text-primary">CodeCHAMPS</h5>
+          <p class="card-text">Code with confidence. Build apps. Innovate. Succeed.</p>
+          <a href="#" class="btn btn-light">Explore Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- FinCHAMPS Card -->
+    <div class="col-md-4">
+      <div class="card card-3">
+        <img class="card-img-top" src="{% static "brand/img/fin_icon.png" %}" alt="FinCHAMPS logo">
+        <div class="card-body">
+          <h5 class="card-title text-success">FinCHAMPS</h5>
+          <p class="card-text">Ensure your child's financial success with simulation-based money classes.</p>
+          <a href="#" class="btn btn-light">Explore Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+		 {% endcomment %}
+		{% comment %} <!-- Start Fun-facts -->
+		<div id="fun-facts" class="fun-facts section overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-home"></i>
+							<div class="content">
+								<span class="counter">3468</span>
+								<p>Class</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-user-alt-3"></i>
+							<div class="content">
+								<span class="counter">557</span>
+								<p>Students</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont-simple-smile"></i>
+							<div class="content">
+								<span class="counter">4379</span>
+								<p>Teachers</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-table"></i>
+							<div class="content">
+								<span class="counter">32</span>
+								<p>Years of Experience</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Fun-facts --> {% endcomment %}
+		
+		{% comment %} <!-- Start Why choose -->
+		<section class="why-choose section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Extend Our Services To Work With High Level Experts</h2>
+							<img src="{% static "brand/img/section-img.png" %}" alt="#">
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</section>
+		<!--/ End Why choose --> {% endcomment %}
+		
+		
+		
+		
+		
+		
+		
+		<!-- Start service -->
+		<section class="services section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Offer Knowledge With</h2>
+							<img src="{% static "brand/img/section-img.png" %}" alt="#">
+							<p>It signifies our commitment to delivering valuable insights and information under the guidance of experienced professionals, ensuring you receive top-quality educational support and expertise.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-read-book"></i>
+							<h4><a href="service-details.html">Powerful Resource Bank</a></h4>
+							<p>
+								An education site's powerful resource bank is a comprehensive repository of learning materials, offering a wide range of resources such as lesson plans, textbooks, interactive multimedia, and assessment tools. It empowers educators and students with a wealth of educational content to enhance teaching and learning experiences. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-test-tube-alt"></i>
+							<h4><a href="service-details.html">Experimental Learning</a></h4>
+							<p>Experiential learning is an educational approach that emphasizes learning through hands-on experiences, reflection, and active engagement. It allows learners to acquire knowledge, develop skills, and gain insights by directly participating in real-world activities, promoting a deeper understanding of the subject matter. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-atom"></i>
+							<h4><a href="service-details.html">Strong Learning</a></h4>
+							<p>Strong learning refers to a robust and effective learning process characterized by deep comprehension, retention, and the application of knowledge or skills. It often involves active engagement, critical thinking, and a focus on mastery rather than surface-level memorization, leading to a lasting and meaningful understanding of the subject matte </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-brainstorming"></i>
+							<h4><a href="service-details.html">Creativity Learning</a></h4>
+							<p>
+								Creative learning is an educational approach that encourages students to think innovatively, problem-solve, and express themselves through various artistic and imaginative means. It fosters a nurturing environment for original thinking, enabling students to explore their creativity, develop unique perspectives, and apply their creative skills to their academic and personal growth. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-certificate-alt-2"></i>
+							<h4><a href="service-details.html">Recogonised Learning</a></h4>
+							<p>Recognized learning refers to education or training that is formally acknowledged, often through certifications, degrees, or other credentials, by educational institutions, employers, or relevant authorities. This recognition indicates that the learner has acquired specific knowledge, skills, or competencies in a manner that meets established standards and is considered valid for various purposes, such as employment or further education. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-instrument"></i>
+							<h4><a href="service-details.html">Hands On Excersise</a></h4>
+							<p>A hands-on exercise is a practical activity that involves actively doing something to learn or practice a skill. In the context of creative writing, it typically involves writing or crafting content to improve one's writing abilities through practical experience.</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End service -->
+
+
+		{% comment %} <!--/ Start Language Slider -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12 col-12">
+					<div class="owl-carousel portfolio-slider">
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
+							<p  class="testimonial-card">"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+						</div>
+						
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
+							<p  class="testimonial-card">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+						</div>
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
+							<p class="testimonial-card">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
+						</div>
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
+							<p class="testimonial-card">"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+						</div>
+						
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
+							<p class="testimonial-card">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+						</div>
+						<div class="single-pf">
+							<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
+							<p class="testimonial-card">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		<!--/ End Language Slider--> {% endcomment %}
+
+		
+		<!-- Start portfolio -->
+		<section class="portfolio section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Testimonials</h2>
+							<img src="{% static "brand/img/section-img.png" %}"alt="#">
+							<p>
+								Testimonials are statements or endorsements written or spoken by individuals who have used a product or service and are sharing their experiences and satisfaction. They are often used to build trust and credibility for a product, service, or business by showcasing positive feedback and real-life success stories from customers or clients.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<style>
+				.testimonial-container {
+					text-align: center;
+				  }
+				  
+				  .student-image {
+					cursor: pointer;
+					border-radius: 50%;
+					width: 150px;
+					height: 150px;
+					object-fit: cover;
+				  }
+				  
+				  .testimonial-card {
+					visibility:hidden;
+					padding: 20px;
+					background-color: #f4f4f4;
+					border-radius: 8px;
+					margin-top: 20px;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				  }
+				  
+				  .testimonial-card p{
+					margin-bottom: 10px;
+					font-weight: bold;
+				  }
+			</style>
+			{% comment %} <style>
+				.testimonial-card {
+					width: 300px;
+					border: 1px solid #ccc;
+					margin: 10px;
+					padding: 10px;
+					background-color: #f9f9f9;
+					border-radius: 10px;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+				}
+		
+				.testimonial-card h3 {
+					font-size: 18px;
+					margin: 0;
+				}
+		
+				.testimonial-card p {
+					font-size: 14px;
+					margin: 10px 0;
+				}
+		
+				.testimonial-card .author {
+					font-size: 12px;
+				}
+			</style> {% endcomment %}
+	
+			
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider">
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
+								<p  class="testimonial-card font-weight-bold" >"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+							</div>
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf2.jpg" %}" alt="#">
+								<p  class="testimonial-card font-weight-bold" id="testimonialCard">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+							</div>
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
+								<p  class="testimonial-card font-weight-bold" id="testimonialCard">"Choosing this institution was the best decision of my academic journey. The faculty's dedication to student success is unparalleled. The hands-on learning experiences and supportive community have truly shaped my growth."</p>
+							</div>
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
+								<p class="testimonial-card font-weight-bold">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
+							</div>
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf1.jpg" %}" alt="#">
+								<p class="testimonial-card font-weight-bold">"I can't express how much this educational site has helped me. The content is well-structured, the explanations are clear, and the interactive quizzes make learning fun. It's a game-changer for my studies, and I feel more confident in my classes now. Highly recommend it!"</p>
+							</div>
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf2.jpg" %}" alt="#">
+								<p  class="testimonial-card font-weight-bold" id="testimonialCard">"This site is a hidden gem! I stumbled upon it while looking for resources to help with my math course. The video tutorials are fantastic, and the practice problems with step-by-step solutions are a lifesaver. It's like having a personal tutor 24/7. I've improved my grades, and I'm genuinely grateful for this resource."</p>
+							</div>
+							
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf3.jpg" %}" alt="#">
+								<p class="testimonial-card font-weight-bold">"Choosing this institution was the best decision of my academic journey. The faculty's dedication to student success is unparalleled. The hands-on learning experiences and supportive community have truly shaped my growth."</p>
+							</div>
+							<div class="single-pf">
+								<img src="{% static "brand/img/pf4.jpg" %}" alt="#">
+								<p class="testimonial-card font-weight-bold">"As a busy college student, I appreciate the flexibility of this platform. The mobile app is user-friendly, and I can access my course materials anytime, anywhere. The discussion forums also connect me with fellow students, making learning more interactive. It's a convenient and effective way to keep up with my coursework."</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End portfolio -->
+
+
+
+
+		{% comment %} <!-- Pricing Table -->
+		<section class="pricing-table section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Provide You The Classes In Resonable Price</h2>
+							<img src="{% static "brand/img/section-img.png" %}" alt="#">
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont icofont-graduate-alt"></i>
+								</div>
+								<h4 class="title">Advanced</h4>
+								<div class="price">
+									<p class="amount">&#8377;599<span>/ Per Year</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Personalized Learning Paths</li>
+								<li><i class="icofont icofont-ui-check"></i>Adaptive Learning Algorithms</li>
+								<li class="cross"><i class="icofont icofont-ui-check"></i>Real-time Feedback:</li>
+								<li class="cross"><i class="icofont icofont-ui-check"></i>Peer Collaboration</li>
+								<li class="cross"><i class="icofont icofont-ui-check"></i>Gamification</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#">Book Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont icofont-certificate-alt-1"></i>
+								</div>
+								<h4 class="title">Intemediate</h4>
+								<div class="price">
+									<p class="amount">&#8377;299<span>/ Per Year</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Personalized Learning Paths</li>
+								<li><i class="icofont icofont-ui-check"></i>Adaptive Learning Algorithms</li>
+								<li><i class="icofont icofont-ui-check"></i>Real-time Feedback:</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Peer Collaboration</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Gamification</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#">Book Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-medal"></i>
+								</div>
+								<h4 class="title">Beginner</h4>
+								<div class="price">
+									<p class="amount">&#8377;199<span>/ Per Year</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Personalized Learning Paths</li>
+								<li><i class="icofont icofont-ui-check"></i>Adaptive Learning Algorithms</li>
+								<li><i class="icofont icofont-ui-close"></i>Real-time Feedback:</li>
+								<li><i class="icofont icofont-ui-close"></i>Peer Collaboration</li>
+								<li><i class="icofont icofont-ui-close"></i>Gamification</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#">Book Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+				</div>	
+			</div>	
+		</section>	
+		<!--/ End Pricing Table --> {% endcomment %}
+		<!-- Start clients -->
+		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Support Multi-Language Teaching</h2>
+							<img src="{% static "brand/img/section-img.png" %}" alt="#">
+							<p>
+								"We teach all class 1-12, We provide seamless user experiences with multi-language support on our platform, ensuring accessibility and inclusivity for a diverse audience. From dynamic content translation to user-friendly language toggles, we tailor the experience to meet the preferences of our global users."</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<style>
+			/* Center the text */
+			.single-clients h3{
+			  text-align: center;
+			}
+		
+		  </style>
+<div class="clients">
+	<div class="container">
+		<div class="slider">
+			<div class="col-lg-12 col-md-12 col-12">
+				<div class="owl-carousel clients-slider">
+					<div class="single-clients">
+						<img src="https://wallpapers.com/images/hd/arabic-background-dfbtv1j4iivp4zbk.jpg"  style="height:140px"  alt="#">
+						<h3>Arabic</h3>
+					</div>
+					<div class="single-clients">
+						<img src="https://www.instrucko.com/_static/images/hindi.svg"  alt="#">
+						<h3>Hindi</h3>
+					</div>
+					<div class="single-clients">
+						<img src="https://i.pngimg.me/thumb/f/720/comrawpixel7374398.jpg" style="height:150px" alt="#">
+						<h3>English</h3>
+					</div>
+					<div class="single-clients">
+						<img src="https://www.instrucko.com/_static/images/french.svg" alt="#">
+						<h3>French</h3>
+					</div>
+					<div class="single-clients">
+						<img src="https://wallpapers.com/images/hd/arabic-background-dfbtv1j4iivp4zbk.jpg"  style="height:140px"  alt="#">
+						<h3>Arabic</h3>
+					</div>
+					<div class="single-clients">
+					<img src="https://www.instrucko.com/_static/images/hindi.svg"  alt="#">
+						<h3>Hindi</h3>
+					</div>
+					 <div class="single-clients">
+						<img src="https://i.pngimg.me/thumb/f/720/comrawpixel7374398.jpg" style="height:140px"  alt="#">
+						<h3>English</h3>
+					</div>
+					<div class="single-clients">
+						<img src="https://www.instrucko.com/_static/images/french.svg" alt="#">
+						<h3>French</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--/Ens clients -->
+<br>
+<br>
+		
+		<!-- Start Call to action -->
+		<section class="call-action overlay" data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="content">
+							<h2>Please Contact? Call @8010777200</h2>
+							{% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dictum turpis nec gravida.</p> {% endcomment %}
+							<div class="button">
+								<a href="#" class="btn">Contact Now</a>
+								<a href="#" class="btn second">Learn More<i class="fa fa-long-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Call to action -->
+		
+
+		
+		<!-- Footer Area -->
+		<footer id="footer" class="footer ">
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>About Us</h2>
+								<p>Welcome to Endeavour Edtech, where education meets innovation! At Endeavour, we are passionate about revolutionizing the learning experience through cutting-edge technology. Our mission is to empower learners of all ages to thrive in a rapidly evolving digital world.</p>
+								<!-- Social -->
+								<ul class="social">
+									<li><a href="#"><i class="icofont-facebook"></i></a></li>
+									<li><a href="#"><i class="icofont-google-plus"></i></a></li>
+									<li><a href="#"><i class="icofont-twitter"></i></a></li>
+									<li><a href="#"><i class="icofont-vimeo"></i></a></li>
+									<li><a href="#"><i class="icofont-pinterest"></i></a></li>
+								</ul>
+								<!-- End Social -->
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer f-link">
+								<h2>Quick Links</h2>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a></li>	
+										</ul>
+									</div>
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>	
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Open Hours</h2>
+								{% comment %} <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p> {% endcomment %}
+								<ul class="time-sidual">
+									<li class="day">Monday - Friday <span>8.00-20.00</span></li>
+									<li class="day">Saturday <span>9.00-18.30</span></li>
+									<li class="day">Monday - Thursday <span>9.00-15.00</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Newsletter</h2>
+								<p>subscribe to our newsletter to get  news in your inbox..</p>
+								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Your email address'" required="" type="email">
+									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Footer Top -->
+			<!-- Copyright -->
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-12">
+							<div class="copyright-content">
+								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">Endeavour Edutech</a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Copyright -->
+		</footer>
+		<script>
+			var staticPath = "{% static 'brand/img' %}";
+		</script>
+		<!--/ End Footer Area -->
+		<!-- Scripts -->
+		<script src="{% static "brand/js/lottie.min.js" %}"></script> 
+		<!-- jquery Min JS -->
+        <script src="{% static "brand/js/jquery.min.js" %}"></script>
+		<!-- jquery Migrate JS -->
+		<script src="{% static "brand/js/jquery-migrate-3.0.0.js" %}"></script>
+		<!-- jquery Ui JS -->
+		<script src="{% static "brand/js/jquery-ui.min.js" %}"></script>
+		<!-- Easing JS -->
+        <script src="{% static "brand/js/easing.js" %}"></script>
+		<!-- Color JS -->
+		<script src="{% static "brand/js/colors.js" %}"></script>
+		<!-- Popper JS -->
+		<script src="{% static "brand/js/popper.min.js" %}"></script>
+		<!-- Bootstrap Datepicker JS -->
+		<script src="{% static "brand/js/bootstrap-datepicker.js" %}"></script>
+		<!-- Jquery Nav JS -->
+        <script src="{% static "brand/js/jquery.nav.js" %}"></script>
+		<!-- Slicknav JS -->
+		<script src="{% static "brand/js/slicknav.min.js" %}"></script>
+		<!-- ScrollUp JS -->
+        <script src="{% static "brand/js/jquery.scrollUp.min.js" %}"></script>
+		<!-- Niceselect JS -->
+		<script src="{% static "brand/js/niceselect.js" %}"></script>
+		<!-- Tilt Jquery JS -->
+		<script src="{% static "brand/js/tilt.jquery.min.js" %}"></script>
+		<!-- Owl Carousel JS -->
+        <script src="{% static "brand/js/owl-carousel.js" %}"></script>
+		<!-- counterup JS -->
+		<script src="{% static "brand/js/jquery.counterup.min.js" %}"></script>
+		<!-- Steller JS -->
+		<script src="{% static "brand/js/steller.js" %}"></script>
+		<!-- Wow JS -->
+		<script src="{% static "brand/js/wow.min.js" %}"></script>
+		<!-- Magnific Popup JS -->
+		<script src="{% static "brand/js/jquery.magnific-popup.min.js" %}"></script>
+		<!-- Counter Up CDN JS -->
+		<script src="{% static "brand/js/waypoints.min.js" %}"></script>
+		<!-- Bootstrap JS -->
+		<script src="{% static "brand/js/bootstrap.min.js" %}"></script>
+		<!-- Main JS -->
+		<script src="{% static "brand/js/main.js" %}"></script>
+    </body>
+</html>
